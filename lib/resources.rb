@@ -57,6 +57,15 @@ module Dribbble
         updated_at: "2014-02-14T22:32:11Z"
       }
 
+      BUCKET = {
+        id: 3294,
+        name: "Great Type",
+        description: "Collecting wonderful type from around the Dribbbleverse.",
+        screenshots: 240,
+        created_at: "2011-05-21T21:04:30Z",
+        updated_at: "2013-10-13T21:48:27Z"
+      }
+
       def headers(status, headers = {})
         class_name = "headers"
         class_name << " no-response" if [204, 404].include?(status)

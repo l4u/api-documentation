@@ -7,7 +7,7 @@ title: Buckets | Dribbble API
 * TOC
 {:toc}
 
-## List buckets of a user
+## List user buckets
 
 List a user's buckets:
 

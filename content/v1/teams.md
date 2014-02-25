@@ -7,7 +7,7 @@ title: Teams | Dribbble API
 * TOC
 {:toc}
 
-## List teams of a user
+## List user teams
 
 List a user's teams:
 

@@ -1,0 +1,303 @@
+@import "reset";
+@import "pygments";
+
+body,
+input {
+  background: #FFF;
+  color: #444;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #4083A9;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+body > header {
+  background: rgba(47, 47, 47, 0.98);
+  width: 100%;
+  height: 67px;
+
+  .container {
+    position: relative;
+  }
+
+  h1 {
+    float: left;
+
+    a {
+      background: url(/images/logo.png) no-repeat 0 15px;
+      background-size: 75px 19px;
+      color: #FFF;
+      width: 75px;
+      padding: 38px 0 0 0;
+      font: normal 14px/1 Consolas, "Liberation Mono", Courier, monospace;
+      text-decoration: none !important;
+      display: block;
+      transition: opacity 0.2s ease;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+
+  nav {
+    margin: 0 0 0 16px;
+    float: left;
+
+    li {
+      float: left;
+
+      &#search {
+        position: absolute;
+        right: 12px;
+        float: none;
+
+        input {
+          background: #FFF url(/images/icon-search.png) no-repeat 7px 50%;
+          background-size: 14px 14px;
+          color: #BBB;
+          width: 190px;
+          margin: 21px 0;
+          padding: 5px 5px 5px 25px;
+          border: 0;
+          border-radius: 4px;
+          outline: 0;
+          font-size: 12px;
+        }
+      }
+    }
+
+    a {
+      color: #999;
+      padding: 27px 12px;
+      font-size: 13px;
+      font-weight: normal;
+      line-height: 1;
+      text-decoration: none !important;
+      display: block;
+      float: left;
+
+      &:hover {
+        color: #DDD;
+      }
+
+      &.active {
+        color: #FFF;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.container {
+  width: 970px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+section {
+  background: #F0F0F0;
+  font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow: hidden;
+
+  article {
+    width: 640px;
+    float: left;
+
+    h1 {
+      margin: 16px 0;
+      font-size: 28px;
+      font-weight: 500;
+    }
+
+    h2 {
+      margin: 12px 0;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    h3 {
+      margin: 12px 0;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    p {
+      margin: 16px 0;
+      line-height: 1.5;
+
+      code {
+        font: 12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+        color: #52595d;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+        padding: 0px 3px;
+        display: inline-block;
+      }
+    }
+
+    ul {
+      margin: 16px 0;
+      list-style: disc inside;
+    }
+
+    table {
+      width: 100%;
+      margin: 16px 0;
+      border-collapse: collapse;
+      border-spacing: 0;
+      display: block;
+      overflow: auto;
+
+      tr {
+        background: #FFF;
+        border-top: 1px solid #CCC;
+        vertical-align: inherit;
+      }
+
+      th,
+      td {
+        border: 1px solid #DDD;
+        padding: 8px 16px;
+      }
+
+      code {
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+section aside {
+  width: 256px;
+  float: right;
+
+  ul {
+    background: #FFF;
+
+    &:first-child {
+      margin: 16px 0;
+      border-radius: 4px;
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.08);
+
+      > li:before {
+        position: absolute;
+        top: 8px;
+        left: 9px;
+        color: #999;
+        content: "\25B8";
+        font-size: 12px;
+        line-height: 22px;
+      }
+
+      > li.expanded:before {
+        left: 8px;
+        content: "\25BE";
+      }
+    }
+
+    li {
+      position: relative;
+
+      a {
+        color: #222;
+        padding: 8px 8px 8px 24px;
+        border-bottom: 1px solid #EEE;
+        display: block;
+
+        &:hover {
+          color: #4083A9;
+          text-decoration: none;
+        }
+      }
+
+      &.active > a {
+        color: #EA4C89;
+      }
+    }
+
+    ul {
+      font-size: 12px;
+
+      li {
+        a {
+          font-weight: normal;
+        }
+      }
+    }
+
+    li.collapsed ul {
+      display: none;
+    }
+  }
+}
+
+pre {
+  background: #FFF;
+  color: #444;
+  margin: 0 0 30px 0;
+  padding: 12px;
+  border: 1px solid #DDD;
+  border-radius: 4px;
+  font: 12px/1.45 Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+  overflow: auto;
+
+  &.terminal {
+    background: #444;
+    color: #FFF;
+    border: none;
+  }
+
+  &.headers {
+    background: #F0F0F0;
+    background-image: -webkit-linear-gradient(top, #F0F0F0, #E0E0E0);
+    color: #666;
+    margin: 0;
+    border-bottom: 0;
+    border-radius: 6px 6px 0 0;
+
+    & + pre {
+      border-radius: 0 0 6px 6px;
+    }
+  }
+}
+
+footer {
+  color: #999;
+  padding: 32px 0;
+  border-top: 1px solid #DDD;
+  font-size: 12px;
+  line-height: 1.6;
+
+  p {
+    a {
+      color: #777;
+
+      &:hover {
+        color: #EA4C89;
+        text-decoration: none;
+      }
+    }
+
+    & + p {
+      margin: 12px 0 0 0;
+    }
+  }
+}

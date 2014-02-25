@@ -1,0 +1,28 @@
+<%= render "head" %>
+
+<header>
+  <div class="container">
+    <h1><a href="/"><span>Dribbble </span>Developer</a></h1>
+
+    <nav>
+      <ul>
+        <li><a href="/" class="active">Overview</a></li>
+        <li><a href="/v1/">API</a></li>
+        <li><a href="http://help.dribbble.com">Support</a></li>
+        <li id="search">
+          <input type="text" placeholder="Search">
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <article>
+      <%= yield %>
+    </article>
+  </div>
+</section>
+
+<%= render "footer" %>

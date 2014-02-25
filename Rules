@@ -1,0 +1,44 @@
+#!/usr/bin/env ruby
+
+compile "/assets/css/*" do
+  filter :sass, syntax: :scss
+end
+
+compile "/assets/js/*" do
+end
+
+compile "/static/*" do
+end
+
+compile "/v1/*" do
+  filter :erb
+  filter :kramdown, toc_levels: [2]
+  filter :colorize_syntax, colorizers: { javascript: :pygmentsrb }
+
+  layout item[:layout] || "api"
+end
+
+compile "*" do
+  filter :erb
+  filter :kramdown, toc_levels: [2]
+
+  layout item[:layout] || "default"
+end
+
+route "/assets/css/*" do
+  "/" + item.identifier.chop[8.. -1] + ".css"
+end
+
+route "/assets/js/*" do
+  "/" + item.identifier.chop[8.. -1] + ".js"
+end
+
+route "/static/*" do
+  item.identifier[7..-2]
+end
+
+route "*" do
+  item.identifier + "index.html"
+end
+
+layout "*", :erb

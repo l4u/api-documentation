@@ -1,5 +1,5 @@
 ---
-title: Users - Teams | Dribbble API
+title: Teams | Dribbble API
 ---
 
 # Teams

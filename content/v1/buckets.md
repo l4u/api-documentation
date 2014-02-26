@@ -16,9 +16,9 @@ title: Buckets | Dribbble API
 <%= headers 200 %>
 <%= json :bucket %>
 
-## List user buckets
+## List a user's buckets
 
-List a user's buckets:
+List a specific user's buckets:
 
     GET /users/:user/buckets
 

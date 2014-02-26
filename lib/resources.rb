@@ -66,7 +66,7 @@ module Dribbble
         updated_at: "2013-10-13T21:48:27Z"
       }
 
-      SHOT = {
+      SHOT_WITHOUT_USER = {
         id: 1,
         title: "Working on the new shop",
         animated: false,
@@ -76,9 +76,12 @@ module Dribbble
         attachments: 0,
         rebounds: 0,
         created_at: "2009-07-08T11:08:35Z",
-        updated_at: "2011-06-25T16:51:39Z",
-        user: USER
+        updated_at: "2011-06-25T16:51:39Z"
       }
+
+      SHOT = SHOT_WITHOUT_USER.merge(
+        user: USER
+      )
 
       def headers(status, headers = {})
         class_name = "headers"

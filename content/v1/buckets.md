@@ -7,6 +7,15 @@ title: Buckets | Dribbble API
 * TOC
 {:toc}
 
+## Get a bucket
+
+    GET /buckets/:id
+
+### Response
+
+<%= headers 200 %>
+<%= json :bucket %>
+
 ## List user buckets
 
 List a user's buckets:

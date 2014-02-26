@@ -34,7 +34,7 @@ module Dribbble
         screenshots: 214,
         followers: 29262,
         following: 1728,
-        avatar_url: "http://d13yacurqjgara.cloudfront.net/users/1/avatars/normal/dc.jpg?1371675643",
+        avatar_url: "//d13yacurqjgara.cloudfront.net/users/1/avatars/normal/dc.jpg?1371675643",
         type: "User",
         created_at: "2009-07-08T02:51:22Z",
         updated_at: "2014-02-22T17:10:33Z"
@@ -51,7 +51,7 @@ module Dribbble
         screenshots: 91,
         followers: 25011,
         following: 6120,
-        avatar_url: "http://d13yacurqjgara.cloudfront.net/users/39/avatars/normal/apple-flat-precomposed.png?1388523974",
+        avatar_url: "//d13yacurqjgara.cloudfront.net/users/39/avatars/normal/apple-flat-precomposed.png?1388523974",
         type: "Team",
         created_at: "2009-08-18T18:34:31Z",
         updated_at: "2014-02-14T22:32:11Z"

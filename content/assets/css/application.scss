@@ -140,8 +140,6 @@ section {
       code {
         font: 12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
         color: #52595d;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
         border-radius: 3px;
         -moz-background-clip: padding;
         -webkit-background-clip: padding-box;
@@ -191,6 +189,10 @@ section aside {
 
   ul {
     background: #FFF;
+
+    ul {
+      background: transparent;
+    }
 
     &:first-child {
       margin: 16px 0;

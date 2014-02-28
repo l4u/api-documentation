@@ -34,6 +34,7 @@ module Dribbble
         screenshots: 214,
         followers: 29262,
         following: 1728,
+        draftees: 165,
         avatar_url: "//d13yacurqjgara.cloudfront.net/users/1/avatars/normal/dc.jpg?1371675643",
         type: "User",
         created_at: "2009-07-08T02:51:22Z",

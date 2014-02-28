@@ -75,6 +75,7 @@ module Dribbble
         comments: 10,
         attachments: 0,
         rebounds: 0,
+        buckets: 0,
         created_at: "2009-07-08T11:08:35Z",
         updated_at: "2011-06-25T16:51:39Z"
       }

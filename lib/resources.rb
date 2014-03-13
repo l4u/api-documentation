@@ -67,7 +67,7 @@ module Dribbble
         updated_at: "2013-10-13T21:48:27Z"
       }
 
-      SHOT_WITHOUT_USER = {
+      SHOT = {
         id: 1,
         title: "Working on the new shop",
         animated: false,
@@ -78,11 +78,19 @@ module Dribbble
         rebounds: 0,
         buckets: 0,
         created_at: "2009-07-08T11:08:35Z",
-        updated_at: "2011-06-25T16:51:39Z"
+        updated_at: "2011-06-25T16:51:39Z",
+        user: USER,
+        rebound_source: nil
       }
 
-      SHOT = SHOT_WITHOUT_USER.merge(
-        user: USER
+      REBOUND = SHOT.merge(
+        id: 2,
+        title: "The new shop",
+        views: 3713,
+        likes: 46,
+        created_at: "2010-07-08T11:08:35Z",
+        updated_at: "2012-06-25T16:51:39Z",
+        rebound_source: SHOT.merge(rebounds: 1).except(:rebound_source)
       )
 
       def headers(status, headers = {})

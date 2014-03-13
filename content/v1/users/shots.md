@@ -20,4 +20,4 @@ List the authenticated user's shots:
 ### Response
 
 <%= headers 200 %>
-<%= json(:shot_without_user) { |hash| [hash] } %>
+<%= json(:shot) { |hash| [hash.except(:user)] } %>

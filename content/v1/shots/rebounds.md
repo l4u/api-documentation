@@ -14,4 +14,4 @@ title: Shots - Rebounds | Dribbble API
 ### Response
 
 <%= headers 200 %>
-<%= json(:shot) { |hash| [hash] } %>
+<%= json(:rebound) { |hash| [hash] } %>

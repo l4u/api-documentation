@@ -93,6 +93,14 @@ module Dribbble
         rebound_source: SHOT.merge(rebounds: 1).except(:rebound_source)
       )
 
+      COMMENT = {
+        id: 3360155,
+        body: "We're working on refining profiles, while paving the way for something we're calling \"Playbook\".",
+        likes: 71,
+        created_at: "2014-02-14T22:32:11Z",
+        user: USER
+      }
+
       def headers(status, headers = {})
         class_name = "headers"
         class_name << " no-response" if [204, 404].include?(status)

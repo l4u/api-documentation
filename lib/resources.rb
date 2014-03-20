@@ -40,7 +40,7 @@ module Dribbble
         likes_received: 21031,
         rebounds: 30,
         rebounds_received: 288,
-        screenshots: 214,
+        shots: 214,
         avatar_url: "//d13yacurqjgara.cloudfront.net/users/1/avatars/normal/dc.jpg?1371675643",
         type: "User",
         created_at: "2009-07-08T02:51:22Z",
@@ -55,7 +55,6 @@ module Dribbble
         location: "Salem, MA",
         website: "http://dribbble.com",
         hireable: false,
-        screenshots: 91,
         comments: 79,
         comments_received: 2053,
         draftees: 7878,
@@ -65,6 +64,7 @@ module Dribbble
         likes_received: 15310,
         rebounds: 6,
         rebounds_received: 424,
+        shots: 91,
         avatar_url: "/assets/dev/avatars/usa_avatar_3.png",
         type: "Team",
         created_at: "2009-08-18T18:34:31Z",
@@ -75,7 +75,7 @@ module Dribbble
         id: 3294,
         name: "Great Type",
         description: "Collecting wonderful type from around the Dribbbleverse.",
-        screenshots: 240,
+        shots: 240,
         created_at: "2011-05-21T21:04:30Z",
         updated_at: "2013-10-13T21:48:27Z"
       }

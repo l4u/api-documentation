@@ -27,7 +27,7 @@ module Dribbble
         id: 1,
         name: "Dan Cederholm",
         username: "simplebits",
-        html_url: "http://dribbble.com/simplebits",
+        html_url: "https://dribbble.com/simplebits",
         bio: "Co-founder and designer of Dribbble. Principal of SimpleBits. Aspiring clawhammer banjoist.",
         location: "Salem, MA",
         website: "http://simplebits.com",
@@ -46,7 +46,7 @@ module Dribbble
         id: 39,
         name: "Dribbble",
         username: "dribbble",
-        html_url: "http://dribbble.com/dribbble",
+        html_url: "https://dribbble.com/dribbble",
         bio: "Show and tell for designers. This is Dribbble on Dribbble.",
         location: "Salem, MA",
         website: "http://dribbble.com",
@@ -74,7 +74,7 @@ module Dribbble
         id: 471756,
         title: "Sasquatch",
         animated: false,
-        html_url: "http://dribbble.com/shots/471756-Sasquatch",
+        html_url: "https://dribbble.com/shots/471756-Sasquatch",
         views: 4372,
         likes: 149,
         comments: 27,
@@ -83,8 +83,8 @@ module Dribbble
         buckets: 8,
         created_at: "2012-03-15T01:52:33Z",
         updated_at: "2012-03-15T02:12:57Z",
-        comments_url: "http://api.dribbble.com/v1/shots/471756/comments",
-        rebounds_url: "http://api.dribbble.com/v1/shots/471756/rebounds",
+        comments_url: "https://api.dribbble.com/v1/shots/471756/comments",
+        rebounds_url: "https://api.dribbble.com/v1/shots/471756/rebounds",
         user: USER
       }
 
@@ -92,7 +92,7 @@ module Dribbble
         id: 472178,
         title: "Vector Victor",
         animated: false,
-        html_url: "http://dribbble.com/shots/472178-Vector-Victor",
+        html_url: "https://dribbble.com/shots/472178-Vector-Victor",
         views: 3555,
         likes: 62,
         comments: 6,
@@ -101,9 +101,9 @@ module Dribbble
         buckets: 1,
         created_at: "2012-03-15T12:53:33Z",
         updated_at: "2012-03-15T12:54:27Z",
-        comments_url: "http://api.dribbble.com/v1/shots/472178/comments",
-        rebounds_url: "http://api.dribbble.com/v1/shots/472178/rebounds",
-        rebound_source_url: "http://api.dribbble.com/v1/shots/471756",
+        comments_url: "https://api.dribbble.com/v1/shots/472178/comments",
+        rebounds_url: "https://api.dribbble.com/v1/shots/472178/rebounds",
+        rebound_source_url: "https://api.dribbble.com/v1/shots/471756",
         user: USER
       }
 

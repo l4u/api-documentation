@@ -71,30 +71,41 @@ module Dribbble
       }
 
       SHOT = {
-        id: 1,
-        title: "Working on the new shop",
+        id: 471756,
+        title: "Sasquatch",
         animated: false,
-        views: 14060,
-        likes: 86,
-        comments: 10,
+        html_url: "http://dribbble.com/shots/471756-Sasquatch",
+        views: 4372,
+        likes: 149,
+        comments: 27,
         attachments: 0,
-        rebounds: 0,
-        buckets: 0,
-        created_at: "2009-07-08T11:08:35Z",
-        updated_at: "2011-06-25T16:51:39Z",
-        user: USER,
-        rebound_source: nil
+        rebounds: 2,
+        buckets: 8,
+        created_at: "2012-03-15T01:52:33Z",
+        updated_at: "2012-03-15T02:12:57Z",
+        comments_url: "http://api.dribbble.com/v1/shots/471756/comments",
+        rebounds_url: "http://api.dribbble.com/v1/shots/471756/rebounds",
+        user: USER
       }
 
-      REBOUND = SHOT.merge(
-        id: 2,
-        title: "The new shop",
-        views: 3713,
-        likes: 46,
-        created_at: "2010-07-08T11:08:35Z",
-        updated_at: "2012-06-25T16:51:39Z",
-        rebound_source: SHOT.merge(rebounds: 1).except(:rebound_source)
-      )
+      REBOUND = {
+        id: 472178,
+        title: "Vector Victor",
+        animated: false,
+        html_url: "http://dribbble.com/shots/472178-Vector-Victor",
+        views: 3555,
+        likes: 62,
+        comments: 6,
+        attachments: 0,
+        rebounds: 1,
+        buckets: 1,
+        created_at: "2012-03-15T12:53:33Z",
+        updated_at: "2012-03-15T12:54:27Z",
+        comments_url: "http://api.dribbble.com/v1/shots/472178/comments",
+        rebounds_url: "http://api.dribbble.com/v1/shots/472178/rebounds",
+        rebound_source_url: "http://api.dribbble.com/v1/shots/471756",
+        user: USER
+      }
 
       COMMENT = {
         id: 3360155,

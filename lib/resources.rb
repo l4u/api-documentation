@@ -28,6 +28,7 @@ module Dribbble
         name: "Dan Cederholm",
         username: "simplebits",
         html_url: "https://dribbble.com/simplebits",
+        avatar_url: "https://d13yacurqjgara.cloudfront.net/users/1/avatars/normal/dc.jpg?1371679243",
         bio: "Co-founder and designer of Dribbble. Principal of SimpleBits. Aspiring clawhammer banjoist.",
         location: "Salem, MA",
         website: "http://simplebits.com",
@@ -36,7 +37,6 @@ module Dribbble
         following: 1728,
         likes: 34954,
         shots: 214,
-        avatar_url: "//d13yacurqjgara.cloudfront.net/users/1/avatars/normal/dc.jpg?1371675643",
         type: "User",
         created_at: "2009-07-08T02:51:22Z",
         updated_at: "2014-02-22T17:10:33Z"
@@ -47,6 +47,7 @@ module Dribbble
         name: "Dribbble",
         username: "dribbble",
         html_url: "https://dribbble.com/dribbble",
+        avatar_url: "https://d13yacurqjgara.cloudfront.net/users/39/avatars/normal/apple-flat-precomposed.png?1388527574",
         bio: "Show and tell for designers. This is Dribbble on Dribbble.",
         location: "Salem, MA",
         website: "http://dribbble.com",
@@ -55,7 +56,6 @@ module Dribbble
         following: 6120,
         likes: 44,
         shots: 91,
-        avatar_url: "/assets/dev/avatars/usa_avatar_3.png",
         type: "Team",
         created_at: "2009-08-18T18:34:31Z",
         updated_at: "2014-02-14T22:32:11Z"

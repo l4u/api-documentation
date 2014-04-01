@@ -85,6 +85,7 @@ module Dribbble
         updated_at: "2012-03-15T02:12:57Z",
         comments_url: "https://api.dribbble.com/v1/shots/471756/comments",
         rebounds_url: "https://api.dribbble.com/v1/shots/471756/rebounds",
+        tags: %w(fiction sasquatch sketch wip),
         user: USER
       }
 
@@ -104,6 +105,7 @@ module Dribbble
         comments_url: "https://api.dribbble.com/v1/shots/472178/comments",
         rebounds_url: "https://api.dribbble.com/v1/shots/472178/rebounds",
         rebound_source_url: "https://api.dribbble.com/v1/shots/471756",
+        tags: %w(photoshop sasquatch vector wip),
         user: USER
       }
 

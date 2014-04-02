@@ -37,3 +37,26 @@ List who the authenticated user is following:
 <%= headers 200 %>
 <%= json(:user) { |hash| [hash] } %>
 
+## Check if you are following a user
+
+    GET /user/following/:user
+
+### Response, if you are following this user
+
+<%= headers 204 %>
+
+### Response, if you are not following this user
+
+<%= headers 404 %>
+
+## Check if one user is following another
+
+    GET /users/:user/following/:target_user
+
+### Response, if user follows target user
+
+<%= headers 204 %>
+
+### Response, if user does not follow target user
+
+<%= headers 404 %>

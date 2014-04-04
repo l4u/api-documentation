@@ -118,6 +118,7 @@ module Dribbble
         body: "We're working on refining profiles, while paving the way for something we're calling \"Playbook\".",
         likes: 71,
         created_at: "2014-02-14T22:32:11Z",
+        updated_at: "2014-02-14T22:32:11Z",
         user: USER
       }
 

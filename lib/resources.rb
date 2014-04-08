@@ -31,8 +31,10 @@ module Dribbble
         avatar_url: "https://d13yacurqjgara.cloudfront.net/users/1/avatars/normal/dc.jpg?1371679243",
         bio: "Co-founder and designer of Dribbble. Principal of SimpleBits. Aspiring clawhammer banjoist.",
         location: "Salem, MA",
-        website: "http://simplebits.com",
-        twitter_username: "simplebits",
+        links: {
+          web: "http://simplebits.com",
+          twitter: "https://twitter.com/simplebits"
+        },
         followers: 29262,
         following: 1728,
         likes: 34954,
@@ -50,8 +52,10 @@ module Dribbble
         avatar_url: "https://d13yacurqjgara.cloudfront.net/users/39/avatars/normal/apple-flat-precomposed.png?1388527574",
         bio: "Show and tell for designers. This is Dribbble on Dribbble.",
         location: "Salem, MA",
-        website: "http://dribbble.com",
-        twitter_username: "dribbble",
+        links: {
+          web: "http://dribbble.com",
+          twitter: "https://twitter.com/dribbble"
+        },
         followers: 25011,
         following: 6120,
         likes: 44,

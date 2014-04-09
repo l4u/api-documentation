@@ -78,8 +78,11 @@ module Dribbble
         id: 471756,
         title: "Sasquatch",
         html_url: "https://dribbble.com/shots/471756-Sasquatch",
-        image_url: "https://d13yacurqjgara.cloudfront.net/users/1/screenshots/471756/sasquatch.png",
-        image_teaser_url: "https://d13yacurqjgara.cloudfront.net/users/1/screenshots/471756/sasquatch_teaser.png",
+        images: {
+          hidpi: nil,
+          normal: "https://d13yacurqjgara.cloudfront.net/users/1/screenshots/471756/sasquatch.png",
+          teaser: "https://d13yacurqjgara.cloudfront.net/users/1/screenshots/471756/sasquatch_teaser.png"
+        },
         views: 4372,
         likes: 149,
         comments: 27,
@@ -99,8 +102,11 @@ module Dribbble
         id: 472178,
         title: "Vector Victor",
         html_url: "https://dribbble.com/shots/472178-Vector-Victor",
-        image_url: "https://d13yacurqjgara.cloudfront.net/users/1/screenshots/472178/vector-victor.png",
-        image_teaser_url: "https://d13yacurqjgara.cloudfront.net/users/1/screenshots/472178/vector-victor_teaser.png",
+        images: {
+          hidpi: nil,
+          normal: "https://d13yacurqjgara.cloudfront.net/users/1/screenshots/472178/vector-victor.png",
+          teaser: "https://d13yacurqjgara.cloudfront.net/users/1/screenshots/472178/vector-victor_teaser.png"
+        },
         views: 3555,
         likes: 62,
         comments: 6,

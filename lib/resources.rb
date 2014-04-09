@@ -77,7 +77,6 @@ module Dribbble
       SHOT = {
         id: 471756,
         title: "Sasquatch",
-        html_url: "https://dribbble.com/shots/471756-Sasquatch",
         images: {
           hidpi: nil,
           normal: "https://d13yacurqjgara.cloudfront.net/users/1/screenshots/471756/sasquatch.png",
@@ -91,6 +90,7 @@ module Dribbble
         buckets: 8,
         created_at: "2012-03-15T01:52:33Z",
         updated_at: "2012-03-15T02:12:57Z",
+        html_url: "https://dribbble.com/shots/471756-Sasquatch",
         comments_url: "https://api.dribbble.com/v1/shots/471756/comments",
         rebounds_url: "https://api.dribbble.com/v1/shots/471756/rebounds",
         tags: %w(fiction sasquatch sketch wip),
@@ -101,7 +101,6 @@ module Dribbble
       REBOUND = {
         id: 472178,
         title: "Vector Victor",
-        html_url: "https://dribbble.com/shots/472178-Vector-Victor",
         images: {
           hidpi: nil,
           normal: "https://d13yacurqjgara.cloudfront.net/users/1/screenshots/472178/vector-victor.png",
@@ -115,6 +114,7 @@ module Dribbble
         buckets: 1,
         created_at: "2012-03-15T12:53:33Z",
         updated_at: "2012-03-15T12:54:27Z",
+        html_url: "https://dribbble.com/shots/472178-Vector-Victor",
         comments_url: "https://api.dribbble.com/v1/shots/472178/comments",
         rebounds_url: "https://api.dribbble.com/v1/shots/472178/rebounds",
         rebound_source_url: "https://api.dribbble.com/v1/shots/471756",

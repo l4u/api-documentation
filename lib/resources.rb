@@ -77,7 +77,6 @@ module Dribbble
       SHOT = {
         id: 471756,
         title: "Sasquatch",
-        animated: false,
         html_url: "https://dribbble.com/shots/471756-Sasquatch",
         image_url: "https://d13yacurqjgara.cloudfront.net/users/1/screenshots/471756/sasquatch.png",
         image_teaser_url: "https://d13yacurqjgara.cloudfront.net/users/1/screenshots/471756/sasquatch_teaser.png",
@@ -99,7 +98,6 @@ module Dribbble
       REBOUND = {
         id: 472178,
         title: "Vector Victor",
-        animated: false,
         html_url: "https://dribbble.com/shots/472178-Vector-Victor",
         image_url: "https://d13yacurqjgara.cloudfront.net/users/1/screenshots/472178/vector-victor.png",
         image_teaser_url: "https://d13yacurqjgara.cloudfront.net/users/1/screenshots/472178/vector-victor_teaser.png",

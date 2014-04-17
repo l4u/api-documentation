@@ -15,3 +15,25 @@ title: Shots - Comments | Dribbble API
 
 <%= headers 200 %>
 <%= json(:comment) { |hash| [hash] } %>
+
+## Like a comment
+
+    PUT /shots/:shot/comments/:id/like
+
+Liking a comment requires the user to be logged in and authenticated with the
+`write` scope.
+
+### Response
+
+<%= headers 204 %>
+
+## Unike a comment
+
+    DELETE /shots/:shot/comments/:id/like
+
+Unliking a comment requires the user to be logged in and authenticated with the
+`write` scope.
+
+### Response
+
+<%= headers 204 %>

@@ -60,3 +60,23 @@ List who the authenticated user is following:
 ### Response, if user does not follow target user
 
 <%= headers 404 %>
+
+## Follow a user
+
+    PUT /users/:id/follow
+
+Following a user requires the user to be logged in and authenticated with the
+`write` scope.
+
+### Response
+
+<%= headers 204 %>
+
+## Unfollow a user
+
+    DELETE /users/:id/follow
+
+Unfollowing a user requires the user to be logged in and authenticated with the
+`write` scope.
+
+<%= headers 204 %>

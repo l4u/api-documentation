@@ -317,13 +317,35 @@ footer {
       color: #777;
 
       &:hover {
-        color: #EA4C89;
+        color: #444;
         text-decoration: none;
       }
     }
 
     & + p {
       margin: 12px 0 0 0;
+    }
+  }
+
+  p.links {
+    a {
+      float: left;
+      margin: 0 20px 0 0;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 24px;
+
+      img {
+        float: left;
+        width: 24px;
+        margin: 0 6px 0 0;
+        border-radius: 50%;
+        opacity: .37;
+      }
+
+      &:hover img {
+        opacity: .72;
+      }
     }
   }
 }

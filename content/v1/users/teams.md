@@ -9,7 +9,7 @@ title: Teams | Dribbble API
 
 ## List a user's teams
 
-List a specific user's teams:
+List a user's teams:
 
     GET /users/:user/teams
 

@@ -12,16 +12,12 @@ a {
   color: #4083A9;
   font-weight: bold;
   text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 body > header {
   background: rgba(47, 47, 47, 0.98);
   width: 100%;
-  height: 67px;
+  overflow: hidden;
 
   .container {
     position: relative;
@@ -29,30 +25,45 @@ body > header {
 
   h1 {
     float: left;
+    margin: 20px 0;
+    padding: 0;
 
-    a {
-      background: url(/images/logo.png) no-repeat 0 15px;
+    #logo {
+      display: block;
+      float: left;
+      background: url(/images/logo.png) no-repeat 0 0;
       background-size: 75px 19px;
       color: #FFF;
       width: 75px;
-      padding: 38px 0 0 0;
-      font: normal 14px/1 Consolas, "Liberation Mono", Courier, monospace;
+      height: 19px;
       text-decoration: none !important;
-      display: block;
-      transition: opacity 0.2s ease;
+      text-indent: -9999px;
 
       &:hover {
-        opacity: 0.6;
-      }
-
-      span {
-        display: none;
+        opacity: 0.75;
       }
     }
+
+    span#logo-meta {
+        float: left;
+        margin: 0 10px;
+        padding-left: 10px;
+        font-size: 18px;
+        line-height: 19px;
+        border-left: 1px solid rgba(255,255,255,.13);
+
+        a {
+          color: #999;
+
+          &:hover {
+            color: #ddd;
+          }
+        }
+      }
   }
 
   nav {
-    margin: 0 0 0 16px;
+    margin: 12px 0 0 16px;
     float: left;
 
     li {
@@ -80,7 +91,7 @@ body > header {
 
     a {
       color: #999;
-      padding: 27px 12px;
+      padding: 12px;
       font-size: 13px;
       font-weight: normal;
       line-height: 1;
@@ -93,8 +104,10 @@ body > header {
       }
 
       &.active {
+        position: relative;
+        top: -1px;
         color: #FFF;
-        font-weight: bold;
+        font-weight: 500;
       }
     }
   }
@@ -312,5 +325,58 @@ footer {
     & + p {
       margin: 12px 0 0 0;
     }
+  }
+}
+
+/* splash styles */
+
+div.splash {
+  padding: 40px 0;
+  overflow: hidden;
+
+  div.splash-content {
+    float: left;
+    width: 580px;
+
+    h2 {
+      margin: 20px 0 20px 0;
+      font-size: 72px;
+      font-weight: bold;
+      line-height: .9;
+      letter-spacing: -3px;
+    }
+
+    h3 {
+      font-size: 24px;
+      font-weight: normal;
+      line-height: 1.4;
+      color: #777;
+    }
+  }
+
+  div.splash-buttons {
+    margin: 45px 0 0 0;
+
+    a {
+      margin: 0 20px 0 0;
+      padding: 15px 25px;
+      font-size: 15px;
+      line-height: 1;
+      color: #fff;
+      background: #ea4c89;
+      border-radius: 6px;
+
+      &:hover {
+        background: #df3e7b;
+      }
+      &:active {
+        background: #c22b65;
+      }
+    }
+  }
+
+  img.mark {
+    float: right;
+    margin: 0 40px 0 0;
   }
 }

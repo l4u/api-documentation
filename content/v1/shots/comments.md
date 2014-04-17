@@ -9,12 +9,21 @@ title: Shots - Comments | Dribbble API
 
 ## List comments for a shot
 
-    GET /shots/:id/comments
+    GET /shots/:shot/comments
 
 ### Response
 
 <%= headers 200 %>
 <%= json(:comment) { |hash| [hash] } %>
+
+## List users who like a comment
+
+    GET /shots/:shot/comments/:id/fans
+
+### Response
+
+<%= headers 200 %>
+<%= json(:user) { |hash| [hash] } %>
 
 ## Like a comment
 

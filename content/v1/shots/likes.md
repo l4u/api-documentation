@@ -7,6 +7,15 @@ title: Shots - Likes | Dribbble API
 * TOC
 {:toc}
 
+## List users who like a shot
+
+    GET /shots/:id/fans
+
+### Response
+
+<%= headers 200 %>
+<%= json(:user) { |hash| [hash] } %>
+
 ## Like a shot
 
     PUT /shots/:id/like

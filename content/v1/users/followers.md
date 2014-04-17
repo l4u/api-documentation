@@ -63,7 +63,7 @@ List who the authenticated user is following:
 
 ## Follow a user
 
-    PUT /users/:id/follow
+    PUT /users/:user/follow
 
 Following a user requires the user to be logged in and authenticated with the
 `write` scope.
@@ -74,7 +74,7 @@ Following a user requires the user to be logged in and authenticated with the
 
 ## Unfollow a user
 
-    DELETE /users/:id/follow
+    DELETE /users/:user/follow
 
 Unfollowing a user requires the user to be logged in and authenticated with the
 `write` scope.

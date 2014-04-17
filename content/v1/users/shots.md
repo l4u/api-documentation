@@ -11,7 +11,7 @@ title: Users - Shots | Dribbble API
 
 List a user's shots:
 
-    GET /users/:id/shots
+    GET /users/:user/shots
 
 List the authenticated user's shots:
 

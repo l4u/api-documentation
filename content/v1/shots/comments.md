@@ -56,6 +56,17 @@ Creating a comment requires the user to be logged in and authenticated with the
 <%= headers 200 %>
 <%= json(:comment) %>
 
+## Delete a comment
+
+    DELETE /shots/:shot/comments/:id
+
+Deleting a comment requires the user to be logged in and authenticated with the
+`write` scope. The authenticated user must also own the comment.
+
+### Response
+
+<%= headers 204 %>
+
 ## Like a comment
 
     PUT /shots/:shot/comments/:id/like

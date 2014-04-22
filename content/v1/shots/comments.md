@@ -56,6 +56,18 @@ Creating a comment requires the user to be logged in and authenticated with the
 <%= headers 200 %>
 <%= json(:comment) %>
 
+## Update a comment
+
+    PUT /shots/:shot/comments/:id
+
+Updating a comment requires the user to be logged in and authenticated with the
+`write` scope. The authenticated user must also own the comment.
+
+### Response
+
+<%= headers 200 %>
+<%= json(:comment) %>
+
 ## Delete a comment
 
     DELETE /shots/:shot/comments/:id

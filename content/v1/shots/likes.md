@@ -23,14 +23,9 @@ title: Shots - Likes | Dribbble API
 Liking a shot requires the user to be logged in and authenticated with the
 `write` scope.
 
-### Response, if the shot was liked
+### Response
 
 <%= headers 204 %>
-
-### Response, if the shot was not able to be liked
-
-<%= headers 422 %>
-<%= json message: "You have been blocked from liking shots by this member at their request." %>
 
 ## Unike a shot
 

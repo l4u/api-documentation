@@ -68,16 +68,11 @@ List who the authenticated user is following:
 Following a user requires the user to be logged in and authenticated with the
 `write` scope.
 
-### Response, if the user was followed
+### Response
 
 <%= headers 204 %>
 
-### Response, if the user was not able to be followed
-
-<%= headers 422 %>
-<%= json message: "You cannot follow yourself." %>
-
-The following errors are possible reasons:
+The following errors are possible, and will be on the `base` attribute:
 
 * You cannot follow yourself.
 * You have been blocked from following this member at their request.

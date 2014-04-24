@@ -36,7 +36,7 @@ Creating a comment requires the user to be logged in and authenticated with the
 
 | Name | Type | Description |
 |------|------|-------------|
-| `body` | `string` | <strong>Required.</strong> The contents of the comment. |
+| `body` | `string` | **Required.** The contents of the comment. |
 
 ### Example
 

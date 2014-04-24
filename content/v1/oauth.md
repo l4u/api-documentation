@@ -124,6 +124,19 @@ There are a few things that can go wrong in the process of obtaining an OAuth
 token for a user. In the initial authorization request phase, these are some
 errors you might see:
 
+### Application Suspended
+
+If the OAuth application you set up has been suspended (due to reported abuse,
+spam, or a mis-use of the API), Dribbble will redirect to the registered
+callback URL with the following parameters summarizing the error:
+
+    http://your-application.com/callback?error=application_suspended
+      &error_description=Your+application+has+been+suspended.
+      &state=xyz
+
+Please [contact support](http://dribbble.com/contact?api) to solve issues with
+suspended applications.
+
 ### Redirect URI Mismatch
 
 If you provide a redirect_uri that doesn't match what you've registered with

@@ -41,7 +41,7 @@ been created by a third party and the process should be aborted.
 
 Exchange this for an access token:
 
-    POST https://dribbble.com/oauth/access_token
+    POST https://dribbble.com/oauth/token
 
 ### Parameters
 

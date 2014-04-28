@@ -69,6 +69,7 @@ module Dribbble
       SHOT = {
         id: 471756,
         title: "Sasquatch",
+        description: "Quick, messy, five minute sketch of something that might become a fictional something.",
         images: {
           hidpi: nil,
           normal: "https://d13yacurqjgara.cloudfront.net/users/1/screenshots/471756/sasquatch.png",
@@ -93,6 +94,7 @@ module Dribbble
       REBOUND = {
         id: 472178,
         title: "Vector Victor",
+        description: "Rough vectoring begins.",
         images: {
           hidpi: nil,
           normal: "https://d13yacurqjgara.cloudfront.net/users/1/screenshots/472178/vector-victor.png",
@@ -117,10 +119,10 @@ module Dribbble
 
       COMMENT = {
         id: 3360155,
-        body: "We're working on refining profiles, while paving the way for something we're calling \"Playbook\".",
-        likes_count: 71,
-        created_at: "2014-02-14T22:32:11Z",
-        updated_at: "2014-02-14T22:32:11Z",
+        body: "Wow looks great. Looking forward to it.",
+        likes_count: 0,
+        created_at: "2014-02-14T22:36:22Z",
+        updated_at: "2014-02-14T22:36:22Z",
         user: USER
       }
 

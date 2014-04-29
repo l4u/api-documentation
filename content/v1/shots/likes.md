@@ -27,11 +27,11 @@ Liking a shot requires the user to be logged in and authenticated with the
 
 <%= headers 204 %>
 
-## Unike a shot
+## Unlike a shot
 
     DELETE /shots/:id/like
 
-Uniking a shot requires the user to be logged in and authenticated with the
+Unliking a shot requires the user to be logged in and authenticated with the
 `write` scope.
 
 ### Response

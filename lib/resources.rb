@@ -118,11 +118,11 @@ module Dribbble
       }
 
       COMMENT = {
-        id: 3360155,
-        body: "Wow looks great. Looking forward to it.",
-        likes_count: 0,
-        created_at: "2014-02-14T22:36:22Z",
-        updated_at: "2014-02-14T22:36:22Z",
+        id: 1145736,
+        body: "Could he somehow make the shape of an \"S\" with his arms? I feel like I see potential for some hidden shapes in here...\n\nLooks fun!",
+        likes_count: 1,
+        created_at: "2012-03-15T04:24:39Z",
+        updated_at: "2012-03-15T04:24:39Z",
         user: USER
       }
 

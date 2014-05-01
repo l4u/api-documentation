@@ -136,8 +136,8 @@ module Dribbble
           lines << "#{key}: #{value}"
         end
 
-        lines << "X-RateLimit-Limit: 5000"     unless headers.has_key?("X-RateLimit-Limit")
-        lines << "X-RateLimit-Remaining: 4999" unless headers.has_key?("X-RateLimit-Remaining")
+        lines << "X-RateLimit-Limit: 60"     unless headers.has_key?("X-RateLimit-Limit")
+        lines << "X-RateLimit-Remaining: 59" unless headers.has_key?("X-RateLimit-Remaining")
 
         %(<pre class="#{class_name}"><code>#{lines * "\n"}</code></pre>\n)
       end

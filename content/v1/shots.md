@@ -36,23 +36,45 @@ title: Shots | Dribbble API
           <li><code>teams</code></li>
         </ul>
 
-        Default: Results of any type.
+        <strong>Default:</strong> Results of any type.
       </td>
     </tr>
     <tr>
       <td><code>timeframe</code></td>
       <td><code>string</code></td>
-      <td>One of <code>week</code>, <code>month</code>, or <code>year</code>. Default: Results from any time period.</td>
+      <td>
+        A period of time to limit the results to with the following possible values:
+
+        <ul>
+          <li><code>week</code></li>
+          <li><code>month</code></li>
+          <li><code>year</code></li>
+        </ul>
+
+        <strong>Default:</strong> Results from any time period.
+      </td>
     </tr>
     <tr>
       <td><code>date</code></td>
       <td><code>date</code></td>
-      <td>Limit the timeframe to a specific date, week, month, or year. Must be in the format of <code>YYYY-MM-DD</code>.</td>
+      <td>
+        Limit the timeframe to a specific date, week, month, or year. Must be in the format of <code>YYYY-MM-DD</code>.
+      </td>
     </tr>
     <tr>
       <td><code>sort</code></td>
       <td><code>string</code></td>
-      <td>The sort field. One of <code>recent</code>, <code>views</code>, or <code>comments</code>. Default: Results are sorted by popularity.</td>
+      <td>
+        The sort field with the following possible values:
+
+        <ul>
+          <li><code>comments</code></li>
+          <li><code>recent</code></li>
+          <li><code>views</code></li>
+        </ul>
+
+        <strong>Default:</strong> Results are sorted by popularity.
+      </td>
     </tr>
   </tbody>
 </table>

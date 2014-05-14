@@ -134,7 +134,7 @@ callback URL with the following parameters summarizing the error:
       &error_description=Your+application+has+been+suspended.
       &state=xyz
 
-Please [contact support](http://dribbble.com/contact?api) to solve issues with
+Please [contact support](https://dribbble.com/contact?api) to solve issues with
 suspended applications.
 
 ### Redirect URI Mismatch

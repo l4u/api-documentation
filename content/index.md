@@ -9,7 +9,7 @@ title: Dribbble Developer
 
     <div class="splash-buttons">
       <a href="/v1/">Read the API docs</a>
-      <a href="https://dribbble.com/account/applications">Register an application</a>
+      <a href="https://dribbble.com/account/applications/new">Register an application</a>
     </div>
   </div>
 

@@ -52,7 +52,7 @@ The only Dribbble data you may use in your product or application is that which 
 
 ## Be Gentle
 
-Don't overburden our servers. We've published some specifics with regard to <a href="/v1/#rate-limiting">rate limiting</a>, but we reserve the right to determine abuse or excessive usage of the API and throttle or block any service accordingly.
+Don't overburden our servers. We've published some specifics with regard to [rate limiting](/v1/#rate-limiting), but we reserve the right to determine abuse or excessive usage of the API and throttle or block any service accordingly.
 
 ## Termination
 

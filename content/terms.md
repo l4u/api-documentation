@@ -28,6 +28,16 @@ In particular, do not use the API, or any Dribbble data, to build the following:
 
 We'll do our best to communicate fair use of the Dribbble API in this space and others, but the onus is on you to contact us and inquire whether your use of the API is permitted.
 
+## Branding
+
+Don't use the Dribbble name, logo or other marks to brand your application,
+or register a url containing the word 'dribbble' (or a variant of it).
+Give your application an original name to make it clear that it's owned and
+operated by someone other than Dribbble.
+
+Please see our [Brand Guidelines](https://dribbble.com/branding) for more
+information.
+
 ## Members and Content
 
 Dribbble members own all rights to their content and it is your responsibility to make sure your use of the API does not contravene those rights. You are solely responsible for making use of Dribbble images and other member data in compliance with members' requirements and/or restrictions.

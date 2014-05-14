@@ -3,14 +3,14 @@
 <header>
   <div class="container">
     <h1>
-      <a href="https://dribbble.com/" id="logo">Dribbble</a>
+      <a href="http://dribbble.com" id="logo">Dribbble</a>
       <span id="logo-meta"><a href="/">Developer</a></span>
     </h1>
 
     <nav>
       <ul>
         <li><a href="/v1/">API</a></li>
-        <li><a href="/terms/">Terms &amp; Guidelines</a></li>
+        <li><a href="/terms/" class="active">Terms &amp; Guidelines</a></li>
         <li><a href="http://dribbble.com/contact?api">Support</a></li>
       </ul>
     </nav>
@@ -19,7 +19,9 @@
 
 <section>
   <div class="container">
-    <%= yield %>
+    <article>
+      <%= yield %>
+    </article>
   </div>
 </section>
 

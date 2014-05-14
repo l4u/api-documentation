@@ -15,7 +15,7 @@ We encourage you to build applications that **extend** Dribbble to platforms bey
 
 ### DON'T
 
-Please don't build what we're building. We've invested a lot of time, money and hard work in Dribbble. Our team and many of our members rely on Dribbble for income. As such, we ask that you do not build an application, website, product, or business that attempts to harm, compete with, or replace Dribbble, our website, or our services.
+Don't build what we're building. We've invested a lot of time, money and hard work in Dribbble. Our team and many of our members rely on Dribbble for income. As such, do not build an application, website, product, or business that attempts to harm, compete with, or replace Dribbble, our website, or our services.
 
 In particular, do not use the API, or any Dribbble data, to build the following:
 

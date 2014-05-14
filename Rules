@@ -18,6 +18,14 @@ compile "/v1/*" do
   layout item[:layout] || "api"
 end
 
+compile "/terms/*" do
+  filter :erb
+  filter :kramdown, toc_levels: [2]
+  filter :colorize_syntax, colorizers: { javascript: :pygmentsrb }
+
+  layout item[:layout] || "terms"
+end
+
 compile "*" do
   filter :erb
   filter :kramdown, toc_levels: [2]

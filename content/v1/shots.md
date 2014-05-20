@@ -92,3 +92,21 @@ title: Shots | Dribbble API
 
 <%= headers 200 %>
 <%= json :shot %>
+
+## Create a shot
+
+    POST /shots
+
+COMING SOON
+
+## Update a shot
+
+    PUT /shots/:id
+
+COMING SOON
+
+## Delete a shot
+
+    DELETE /shots/:id
+
+COMING SOON

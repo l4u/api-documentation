@@ -86,6 +86,15 @@ a website or service may not offer any of the restricted features above, such as
 social networking and search for designers or designers for hire, or it will be
 considered a competing offering and be disallowed.
 
+## Automation
+
+We do not allow you to automate actions on the behalf of users, unless they
+specifically request it. For example, an authenticated user may request that you
+post a shot at a certain time in the future. But a client may not automatically
+like recently posted shots or comments, or automatically follow a user unless
+the authenticated user manually requests it. If you are unsure as to whether
+your application violates this guideline please [contact us][] first.
+
 ## API Only
 
 The only Dribbble data you may use in your product or application is that which
@@ -122,3 +131,5 @@ users, or your customers.
 
 Dribbble reserves the right to update and change these terms at any time without
 notice.
+
+[contact us]: https://dribbble.com/contact?api

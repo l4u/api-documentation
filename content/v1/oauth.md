@@ -58,8 +58,7 @@ The response will be returned as JSON and takes the following form:
 
 <%= json access_token: "29ed478ab86c07f1c069b1af76088f7431396b7c4a2523d06911345da82224a0",
          token_type: "bearer",
-         scope: "public write",
-         expires_in: 31557600 %>
+         scope: "public write" %>
 
 ### 3. Use the access token to access the API.
 

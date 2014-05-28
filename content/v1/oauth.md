@@ -75,9 +75,19 @@ For example, in curl you can set the Authorization header like this:
 
     curl -H "Authorization: Bearer ACCESS_TOKEN" https://api.dribbble.com/v1/user
 
+## Client Flow
+
+Applications are provided a read-only access token that can be used for a server
+implementation or public JavaScript client. Note that the access token is still
+subject to [rate limiting](/v1/#rate-limiting).
+
+You use the access token the [same way as a web access
+token](#use-the-access-token-to-access-the-api).
+
 ## Non-Web Application Flow
 
-We currently do not support any other authentication methods besides OAuth.
+We currently do not support any other authentication methods besides OAuth. If
+you only need read-only access try the [client flow](#client-flow).
 
 ## Redirect URLs
 

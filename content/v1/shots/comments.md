@@ -16,14 +16,14 @@ title: Shots - Comments | Dribbble API
 <%= headers 200 %>
 <%= json(:comment) { |hash| [hash] } %>
 
-## List users who like a comment
+## List likes for a comment
 
-    GET /shots/:shot/comments/:id/fans
+    GET /shots/:shot/comments/:id/likes
 
 ### Response
 
 <%= headers 200 %>
-<%= json(:user) { |hash| [hash] } %>
+<%= json(:like) { |hash| [hash] } %>
 
 ## Create a comment
 

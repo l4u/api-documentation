@@ -7,17 +7,17 @@ title: Users - Likes | Dribbble API
 * TOC
 {:toc}
 
-## List shots a user likes
+## List shot likes for a user
 
 List shots a user likes:
 
     GET /users/:user/likes
 
-List shots the authenticated user likes:
+List shot likes for the authenticated:
 
     GET /user/likes
 
 ### Response
 
 <%= headers 200 %>
-<%= json(:shot) { |hash| [hash] } %>
+<%= json(:like_for_user) { |hash| [hash] } %>

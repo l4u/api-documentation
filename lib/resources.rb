@@ -41,6 +41,10 @@ module Dribbble
         likes_count: 34954,
         shots_count: 214,
         type: "User",
+        followers_url: "https://dribbble.com/v1/users/1/followers",
+        likes_url: "https://dribbble.com/v1/users/1/likes",
+        shots_url: "https://dribbble.com/v1/users/1/shots",
+        teams_url: "https://dribbble.com/v1/users/1/teams",
         created_at: "2009-07-08T02:51:22Z",
         updated_at: "2014-02-22T17:10:33Z"
       }
@@ -62,6 +66,10 @@ module Dribbble
         likes_count: 44,
         shots_count: 91,
         type: "Team",
+        followers_url: "https://dribbble.com/v1/users/39/followers",
+        likes_url: "https://dribbble.com/v1/users/39/likes",
+        shots_url: "https://dribbble.com/v1/users/39/shots",
+        teams_url: "https://dribbble.com/v1/users/39/teams",
         created_at: "2009-08-18T18:34:31Z",
         updated_at: "2014-02-14T22:32:11Z"
       }

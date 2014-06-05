@@ -126,6 +126,12 @@ module Dribbble
         user: USER
       }
 
+      LIKE = {
+        id: 24400091,
+        created_at: "2014-01-06T17:19:59Z",
+        user: USER
+      }
+
       def headers(status, headers = {})
         class_name = "headers"
         class_name << " no-response" if [204, 404].include?(status)

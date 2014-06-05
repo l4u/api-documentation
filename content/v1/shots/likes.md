@@ -7,14 +7,14 @@ title: Shots - Likes | Dribbble API
 * TOC
 {:toc}
 
-## List users who like a shot
+## List the likes for a shot
 
-    GET /shots/:id/fans
+    GET /shots/:id/likes
 
 ### Response
 
 <%= headers 200 %>
-<%= json(:user) { |hash| [hash] } %>
+<%= json(:like) { |hash| [hash] } %>
 
 ## Like a shot
 

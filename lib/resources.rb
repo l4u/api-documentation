@@ -139,15 +139,11 @@ module Dribbble
 
       LIKE = {
         id: 24400091,
-        created_at: "2014-01-06T17:19:59Z",
-        user: USER
+        created_at: "2014-01-06T17:19:59Z"
       }
 
-      LIKE_FOR_USER = {
-        id: 24400091,
-        created_at: "2014-01-06T17:19:59Z",
-        shot: SHOT.except(:user)
-      }
+      LIKE_WITH_SHOT = LIKE.merge(shot: SHOT)
+      LIKE_WITH_USER = LIKE.merge(user: USER)
 
       def headers(status, headers = {})
         class_name = "headers"

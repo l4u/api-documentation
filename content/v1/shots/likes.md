@@ -14,7 +14,20 @@ title: Shots - Likes | Dribbble API
 ### Response
 
 <%= headers 200 %>
-<%= json(:like) { |hash| [hash] } %>
+<%= json(:like_with_user) { |hash| [hash] } %>
+
+## Check if you like a shot
+
+    GET /shots/:id/like
+
+### Response, if the user likes the shot
+
+<%= headers 200 %>
+<%= json :like %>
+
+### Response, if the user does not like the shot
+
+<%= headers 404 %>
 
 ## Like a shot
 

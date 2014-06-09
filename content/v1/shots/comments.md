@@ -23,7 +23,7 @@ title: Shots - Comments | Dribbble API
 ### Response
 
 <%= headers 200 %>
-<%= json(:like) { |hash| [hash] } %>
+<%= json(:like_with_user) { |hash| [hash] } %>
 
 ## Create a comment
 

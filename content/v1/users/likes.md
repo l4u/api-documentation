@@ -20,4 +20,4 @@ List the authenticated user's shot likes:
 ### Response
 
 <%= headers 200 %>
-<%= json(:like_for_user) { |hash| [hash] } %>
+<%= json(:like_with_shot) { |hash| [hash] } %>

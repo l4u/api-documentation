@@ -9,11 +9,11 @@ title: Users - Likes | Dribbble API
 
 ## List shot likes for a user
 
-List shots a user likes:
+List a user's shot likes:
 
     GET /users/:user/likes
 
-List shot likes for the authenticated:
+List the authenticated user's shot likes:
 
     GET /user/likes
 

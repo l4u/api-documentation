@@ -79,6 +79,19 @@ Deleting a comment requires the user to be logged in and authenticated with the
 
 <%= headers 204 %>
 
+## Check if you like a comment
+
+    GET /shots/:shot/comments/:id/like
+
+### Response, if the user likes the comment
+
+<%= headers 200 %>
+<%= json :like %>
+
+### Response, if the user does not like the comment
+
+<%= headers 404 %>
+
 ## Like a comment
 
     PUT /shots/:shot/comments/:id/like

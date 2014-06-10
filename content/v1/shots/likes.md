@@ -33,14 +33,15 @@ Checking for a shot like requires the user to be logged in and authenticated.
 
 ## Like a shot
 
-    PUT /shots/:id/like
+    POST /shots/:id/like
 
 Liking a shot requires the user to be logged in and authenticated with the
 `write` scope.
 
 ### Response
 
-<%= headers 204 %>
+<%= headers 201 %>
+<%= json :like %>
 
 ## Unlike a shot
 

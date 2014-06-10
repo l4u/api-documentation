@@ -96,14 +96,15 @@ Checking for a comment like requires the user to be logged in and authenticated.
 
 ## Like a comment
 
-    PUT /shots/:shot/comments/:id/like
+    POST /shots/:shot/comments/:id/like
 
 Liking a comment requires the user to be logged in and authenticated with the
 `write` scope.
 
 ### Response
 
-<%= headers 204 %>
+<%= headers 201 %>
+<%= json :like %>
 
 ## Unike a comment
 

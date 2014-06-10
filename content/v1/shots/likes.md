@@ -20,6 +20,8 @@ title: Shots - Likes | Dribbble API
 
     GET /shots/:id/like
 
+Checking for a shot like requires the user to be logged in and authenticated.
+
 ### Response, if the user likes the shot
 
 <%= headers 200 %>

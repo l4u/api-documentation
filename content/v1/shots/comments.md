@@ -83,6 +83,8 @@ Deleting a comment requires the user to be logged in and authenticated with the
 
     GET /shots/:shot/comments/:id/like
 
+Checking for a comment like requires the user to be logged in and authenticated.
+
 ### Response, if the user likes the comment
 
 <%= headers 200 %>

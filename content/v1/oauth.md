@@ -118,7 +118,9 @@ authorize form.
 | Name | Description |
 |------|-------------|
 | `public` | Grants read-only access to public information. <span class="note">This is the default scope if no scope is provided.</span> |
-| `write` | Grants write access to user resources, such as following, liking, and commenting. |
+| `write` | Grants write access to user resources, except comments and shots. |
+| `comment` | Grants full access to create, update, and delete comments. |
+| `upload` | Grants full access to create, update, and delete shots and attachments. |
 
 Your application can request the scopes in the initial redirection. You can
 specify multiple scopes by separating them with a space:

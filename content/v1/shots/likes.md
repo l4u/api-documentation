@@ -20,7 +20,7 @@ title: Shots - Likes | Dribbble API
 
     GET /shots/:id/like
 
-Checking for a shot like requires the user to be logged in and authenticated.
+Checking for a shot like requires the user to be authenticated.
 
 ### Response, if the user likes the shot
 
@@ -35,8 +35,7 @@ Checking for a shot like requires the user to be logged in and authenticated.
 
     POST /shots/:id/like
 
-Liking a shot requires the user to be logged in and authenticated with the
-`write` scope.
+Liking a shot requires the user to be authenticated with the `write` scope.
 
 ### Response
 
@@ -47,8 +46,7 @@ Liking a shot requires the user to be logged in and authenticated with the
 
     DELETE /shots/:id/like
 
-Unliking a shot requires the user to be logged in and authenticated with the
-`write` scope.
+Unliking a shot requires the user to be authenticated with the `write` scope.
 
 ### Response
 

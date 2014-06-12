@@ -29,8 +29,8 @@ title: Shots - Comments | Dribbble API
 
     POST /shots/:shot/comments
 
-Creating a comment requires the user to be logged in and authenticated with the
-`write` scope. Note that mentions are not currently supported.
+Creating a comment requires the user to be authenticated with the `write` scope.
+Note that mentions are not currently supported.
 
 ### Parameters
 
@@ -60,8 +60,8 @@ Creating a comment requires the user to be logged in and authenticated with the
 
     PUT /shots/:shot/comments/:id
 
-Updating a comment requires the user to be logged in and authenticated with the
-`write` scope. The authenticated user must also own the comment.
+Updating a comment requires the user to be authenticated with the `write` scope.
+The authenticated user must also own the comment.
 
 ### Response
 
@@ -72,8 +72,8 @@ Updating a comment requires the user to be logged in and authenticated with the
 
     DELETE /shots/:shot/comments/:id
 
-Deleting a comment requires the user to be logged in and authenticated with the
-`write` scope. The authenticated user must also own the comment.
+Deleting a comment requires the user to be authenticated with the `write` scope.
+The authenticated user must also own the comment.
 
 ### Response
 
@@ -83,7 +83,7 @@ Deleting a comment requires the user to be logged in and authenticated with the
 
     GET /shots/:shot/comments/:id/like
 
-Checking for a comment like requires the user to be logged in and authenticated.
+Checking for a comment like requires the user to be authenticated.
 
 ### Response, if the user likes the comment
 
@@ -98,8 +98,7 @@ Checking for a comment like requires the user to be logged in and authenticated.
 
     POST /shots/:shot/comments/:id/like
 
-Liking a comment requires the user to be logged in and authenticated with the
-`write` scope.
+Liking a comment requires the user to be authenticated with the `write` scope.
 
 ### Response
 
@@ -110,8 +109,7 @@ Liking a comment requires the user to be logged in and authenticated with the
 
     DELETE /shots/:shot/comments/:id/like
 
-Unliking a comment requires the user to be logged in and authenticated with the
-`write` scope.
+Unliking a comment requires the user to be authenticated with the `write` scope.
 
 ### Response
 

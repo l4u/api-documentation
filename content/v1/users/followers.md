@@ -65,8 +65,7 @@ List who the authenticated user is following:
 
     PUT /users/:user/follow
 
-Following a user requires the user to be logged in and authenticated with the
-`write` scope.
+Following a user requires the user to be authenticated with the `write` scope.
 
 ### Response
 
@@ -82,7 +81,6 @@ The following errors are possible, and will be on the `base` attribute:
 
     DELETE /users/:user/follow
 
-Unfollowing a user requires the user to be logged in and authenticated with the
-`write` scope.
+Unfollowing a user requires the user to be authenticated with the `write` scope.
 
 <%= headers 204 %>

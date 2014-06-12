@@ -109,4 +109,5 @@ COMING SOON
 
     DELETE /shots/:id
 
-COMING SOON
+Deleting a shot requires the user to be authenticated with the `upload` scope.
+The authenticated user must also own the shot.

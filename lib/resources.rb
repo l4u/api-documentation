@@ -42,6 +42,7 @@ module Dribbble
         shots_count: 214,
         type: "User",
         pro: true,
+        buckets_url: "https://dribbble.com/v1/users/1/buckets",
         followers_url: "https://dribbble.com/v1/users/1/followers",
         following_url: "https://dribbble.com/v1/users/1/following",
         likes_url: "https://dribbble.com/v1/users/1/likes",
@@ -69,6 +70,7 @@ module Dribbble
         shots_count: 91,
         type: "Team",
         pro: false,
+        buckets_url: "https://dribbble.com/v1/users/39/buckets",
         followers_url: "https://dribbble.com/v1/users/39/followers",
         likes_url: "https://dribbble.com/v1/users/39/likes",
         shots_url: "https://dribbble.com/v1/users/39/shots",
@@ -169,6 +171,15 @@ module Dribbble
 
       FOLLOWING_WITH_FOLLOWER = FOLLOWING.merge(follower: USER)
       FOLLOWING_WITH_FOLLOWEE = FOLLOWING.merge(followee: USER)
+
+      BUCKET = {
+        id: 2754,
+        name: "Great Marks",
+        description: "Collecting superb brand marks from the <a href=\"https://dribbble.com\">Dribbbleverse</a>.",
+        shots_count: 251,
+        created_at: "2011-05-20T21:05:55Z",
+        updated_at: "2014-02-21T16:37:12Z"
+      }
 
       def headers(status, headers = {})
         class_name = "headers"

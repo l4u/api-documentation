@@ -7,6 +7,15 @@ title: Shots - Attachments | Dribbble API
 * TOC
 {:toc}
 
+## List attachments for a shot
+
+    GET /shots/:id/attachments
+
+### Response
+
+<%= headers 200 %>
+<%= json(:attachment) { |hash| [hash] } %>
+
 ## Delete an attachment
 
     DELETE /shots/:shot/attachments/:id

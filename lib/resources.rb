@@ -92,6 +92,7 @@ module Dribbble
         created_at: "2012-03-15T01:52:33Z",
         updated_at: "2012-03-15T02:12:57Z",
         html_url: "https://dribbble.com/shots/471756-Sasquatch",
+        attachments_url: "https://api.dribbble.com/v1/shots/471756/attachments",
         comments_url: "https://api.dribbble.com/v1/shots/471756/comments",
         likes_url: "https://api.dribbble.com/v1/shots/471756/likes",
         rebounds_url: "https://api.dribbble.com/v1/shots/471756/rebounds",
@@ -118,6 +119,7 @@ module Dribbble
         created_at: "2012-03-15T12:53:33Z",
         updated_at: "2012-03-15T12:54:27Z",
         html_url: "https://dribbble.com/shots/472178-Vector-Victor",
+        attachments_url: "https://api.dribbble.com/v1/shots/472178/attachments",
         comments_url: "https://api.dribbble.com/v1/shots/472178/comments",
         likes_url: "https://api.dribbble.com/v1/shots/472178/likes",
         rebounds_url: "https://api.dribbble.com/v1/shots/472178/rebounds",
@@ -144,6 +146,14 @@ module Dribbble
 
       LIKE_WITH_SHOT = LIKE.merge(shot: SHOT)
       LIKE_WITH_USER = LIKE.merge(user: USER)
+
+      ATTACHMENT = {
+        id: 206165,
+        url: "https://d13yacurqjgara.cloudfront.net/users/1/screenshots/1412410/attachments/206165/weathered-ball-detail.jpg",
+        size: 116375,
+        views_count: 325,
+        created_at: "2014-02-07T16:35:09Z"
+      }
 
       def headers(status, headers = {})
         class_name = "headers"

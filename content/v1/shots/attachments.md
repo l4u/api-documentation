@@ -31,7 +31,16 @@ scope. The authenticated user must also own the shot.
 
 ### Response
 
-<%= headers 201 %>
+<%= headers 201, Location: "https://api.dribbble.com/v1/shots/471756/attachments/73829" %>
+<%= json :attachment %>
+
+## Get a single attachment
+
+    GET /shots/:shot/attachments/:id
+
+### Response
+
+<%= headers 200 %>
 <%= json :attachment %>
 
 ## Delete an attachment

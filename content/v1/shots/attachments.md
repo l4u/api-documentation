@@ -31,8 +31,12 @@ scope. The authenticated user must also own the shot.
 
 ### Response
 
-<%= headers 201, Location: "https://api.dribbble.com/v1/shots/471756/attachments/73829" %>
-<%= json :attachment %>
+Creating an attachment happens asynchronously. After creation the returned
+location will return a `404 Not Found` until processing is completed. If this
+takes longer than five minutes, be sure to [contact
+support](https://dribbble.com/contact?api).
+
+<%= headers 202, Location: "https://api.dribbble.com/v1/shots/471756/attachments/73829" %>
 
 ## Get a single attachment
 

@@ -22,4 +22,4 @@ You can then view the site at [http://localhost:5000](http://localhost:5000).
 
 Except where otherwise noted, content on is licensed under a [Creative Commons CC-BY license](http://creativecommons.org/licenses/by/3.0/us/).
 
-The structure is based on the [GitHub Developer](https://github.com/github/developer.github.com) site.  We thank GitHub for their code and their excellent tools for building software.
+The structure is based on the [GitHub Developer](https://github.com/github/developer.github.com) site. We thank GitHub for their code and their excellent tools for building software.

@@ -15,7 +15,7 @@ specific types of data, and can be revoked by users at any time.
 All developers need to [register their
 application](https://dribbble.com/account/applications/new) before getting
 started. A registered OAuth application is assigned a unique client ID and
-client secret.  The client secret should not be shared.
+client secret. The client secret should not be shared.
 
 ## Web Application Flow
 

@@ -40,7 +40,7 @@ API is permitted.
 ## Branding
 
 Don't use the Dribbble name, logo or other marks to brand your application, or
-register a url containing the word 'dribbble' (or a variant of it).  Give your
+register a url containing the word 'dribbble' (or a variant of it). Give your
 application an original name to make it clear that it's owned and operated by
 someone other than Dribbble.
 

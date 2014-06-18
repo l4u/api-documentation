@@ -30,7 +30,7 @@ module Dribbble
         username: "simplebits",
         html_url: "https://dribbble.com/simplebits",
         avatar_url: "https://d13yacurqjgara.cloudfront.net/users/1/avatars/normal/dc.jpg?1371679243",
-        bio: "Co-founder and designer of Dribbble. Principal of SimpleBits. Aspiring clawhammer banjoist.",
+        bio: "Co-founder and designer of <a href=\"https://dribbble.com/dribbble\">@Dribbble</a>. Principal of SimpleBits. Aspiring clawhammer banjoist.",
         location: "Salem, MA",
         links: {
           web: "http://simplebits.com",
@@ -79,7 +79,7 @@ module Dribbble
       SHOT = {
         id: 471756,
         title: "Sasquatch",
-        description: "Quick, messy, five minute sketch of something that might become a fictional something.",
+        description: "<p>Quick, messy, five minute sketch of something that might become a fictional something.</p>",
         images: {
           hidpi: nil,
           normal: "https://d13yacurqjgara.cloudfront.net/users/1/screenshots/471756/sasquatch.png",
@@ -106,7 +106,7 @@ module Dribbble
       REBOUND = {
         id: 472178,
         title: "Vector Victor",
-        description: "Rough vectoring begins.",
+        description: "<p>Rough vectoring begins.</p>",
         images: {
           hidpi: nil,
           normal: "https://d13yacurqjgara.cloudfront.net/users/1/screenshots/472178/vector-victor.png",
@@ -133,7 +133,7 @@ module Dribbble
 
       COMMENT = {
         id: 1145736,
-        body: "Could he somehow make the shape of an \"S\" with his arms? I feel like I see potential for some hidden shapes in here...\n\nLooks fun!",
+        body: "<p>Could he somehow make the shape of an \"S\" with his arms? I feel like i see potential for some hidden shapes in here...</p>\n\n<p>Looks fun!\n</p>",
         likes_count: 1,
         likes_url: "https://api.dribbble.com/v1/shots/471756/comments/1145736/likes",
         created_at: "2012-03-15T04:24:39Z",
@@ -189,7 +189,10 @@ module Dribbble
           hash = yield(hash)
         end
 
-        %{<pre><code class="language-javascript">#{JSON.pretty_generate(hash).gsub('":', '" :')}</code></pre>}
+        code = JSON.pretty_generate(hash).gsub('":', '" :')
+        code = CGI.escapeHTML(code)
+
+        %{<pre><code class="language-javascript">#{code}</code></pre>}
       end
     end
   end

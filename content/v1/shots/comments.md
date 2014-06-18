@@ -30,7 +30,8 @@ title: Shots - Comments | Dribbble API
     POST /shots/:shot/comments
 
 Creating a comment requires the user to be authenticated with the `write` scope.
-Note that mentions are not currently supported.
+
+Any username mentions, such as @simplebits, are automatically parsed and linked.
 
 ### Parameters
 

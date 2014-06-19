@@ -21,7 +21,8 @@ title: Shots - Attachments | Dribbble API
     POST /shots/:shot/attachments
 
 Creating an attachment requires the user to be authenticated with the `upload`
-scope. The authenticated user must also own the shot.
+scope. The authenticated user must own the shot and be a pro, a team, or a
+member of a team.
 
 ### Parameters
 

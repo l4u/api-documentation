@@ -11,3 +11,20 @@
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
+
+<header>
+  <div class="container">
+    <h1>
+      <a href="http://dribbble.com" id="logo">Dribbble</a>
+      <span id="logo-meta"><a href="/">Developer</a></span>
+    </h1>
+
+    <nav>
+      <ul>
+        <li><a href="/v1/"<%= %{ class="active"} if @active == "api" %>>API</a></li>
+        <li><a href="/terms/"<%= %{ class="active"} if @active == "terms" %>>Terms &amp; Guidelines</a></li>
+        <li><a href="http://dribbble.com/contact?api">Support</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,7 @@
+<% @changes.each do |change| %>
+  <div class="change" id="<%= change.path %>">
+    <%= render "_meta", item: change %>
+
+    <%= change.compiled_content %>
+  </div>
+<% end %>

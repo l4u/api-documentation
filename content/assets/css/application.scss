@@ -199,6 +199,50 @@ section {
         white-space: nowrap;
       }
     }
+
+    .change {
+      & + .change {
+        margin-top: 48px;
+      }
+
+      h1 {
+        margin-bottom: 0;
+
+        a {
+          color: #444;
+
+          &:hover {
+            color: #4083A9;
+          }
+        }
+      }
+
+      ul.meta {
+        margin: 0 0 16px 0;
+        font-size: 12px;
+
+        li {
+          display: inline;
+
+          &.published:after {
+            content: " \00b7 ";
+          }
+
+          a {
+            color: #222;
+            font-weight: normal;
+
+            &:hover {
+              color: #4083A9;
+            }
+          }
+        }
+      }
+
+      p {
+        margin: 16px 0;
+      }
+    }
   }
 }
 
@@ -282,6 +326,22 @@ section aside {
     color: #777;
     background: rgba(0,0,0,0.05);
     border-radius: 4px;
+  }
+
+  &.changes {
+    h1 {
+      font-size: 22px;
+    }
+
+    ol {
+      margin: 8px 0 0 20px;
+      list-style: decimal;
+
+      span {
+        font-size: 12px;
+        display: block;
+      }
+    }
   }
 }
 

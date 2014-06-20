@@ -1,0 +1,34 @@
+<%= render "head", active: "changes" %>
+
+<section>
+  <div class="container">
+    <article>
+      <% if @item.identifier == "/changes/" %>
+        <%= yield %>
+      <% else %>
+        <div class="change" id="<%= @item.path %>">
+          <%= render "_meta", item: @item %>
+
+          <%= yield %>
+        </div>
+      <% end %>
+    </article>
+
+    <aside class="changes">
+      <h1>Recent Changes</h1>
+
+      <nav>
+        <ol>
+          <% changes.first(10).each do |change| %>
+            <li>
+              <a href="<%= change.path %>"><%= change[:title] %></a>
+              <span class="date"><%= change_date change %></span>
+            </li>
+          <% end %>
+        </ol>
+      </nav>
+    </aside>
+  </div>
+</section>
+
+<%= render "footer" %>

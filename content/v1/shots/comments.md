@@ -29,7 +29,8 @@ title: Shots - Comments | Dribbble API
 
     POST /shots/:shot/comments
 
-Creating a comment requires the user to be authenticated with the `write` scope.
+Creating a comment requires the user to be authenticated with the `comment`
+scope.
 
 Any username mentions, such as @simplebits, are automatically parsed and linked.
 
@@ -61,8 +62,8 @@ Any username mentions, such as @simplebits, are automatically parsed and linked.
 
     PUT /shots/:shot/comments/:id
 
-Updating a comment requires the user to be authenticated with the `write` scope.
-The authenticated user must also own the comment.
+Updating a comment requires the user to be authenticated with the `comment`
+scope. The authenticated user must also own the comment.
 
 ### Response
 
@@ -73,8 +74,8 @@ The authenticated user must also own the comment.
 
     DELETE /shots/:shot/comments/:id
 
-Deleting a comment requires the user to be authenticated with the `write` scope.
-The authenticated user must also own the comment.
+Deleting a comment requires the user to be authenticated with the `comment`
+scope. The authenticated user must also own the comment.
 
 ### Response
 

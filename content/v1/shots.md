@@ -103,7 +103,25 @@ COMING SOON
 
     PUT /shots/:id
 
-COMING SOON
+Updating a shot requires the user to be authenticated with the `upload` scope.
+The authenticated user must also own the shot.
+
+### Parameters
+
+| Name | Type | Description |
+|------|------|-------------|
+| `title` | `string` | The title of the shot. |
+| `team_id` | `integer` | An ID of a team to associate the shot with.<br><br>The authenticated user must be on the team. If any empty value is provided the team association will be removed. |
+| `tags` | `array` | Tags for the shot.<br><br>Limited to a maximum of 12 tags. If any existing tags are not provided they will be removed. |
+
+### Example
+
+<%= json title: SHOT[:title], team_id: SHOT[:team][:id], tags: SHOT[:tags]  %>
+
+### Response
+
+<%= headers 200 %>
+<%= json(:shot) { |hash| hash.except(:user) } %>
 
 ## Delete a shot
 

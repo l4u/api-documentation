@@ -30,7 +30,7 @@ module Dribbble
         username: "simplebits",
         html_url: "https://dribbble.com/simplebits",
         avatar_url: "https://d13yacurqjgara.cloudfront.net/users/1/avatars/normal/dc.jpg?1371679243",
-        bio: "Co-founder and designer of <a href=\"https://dribbble.com/dribbble\">@Dribbble</a>. Principal of SimpleBits. Aspiring clawhammer banjoist.",
+        bio: "Co-founder &amp; designer of <a href=\"https://dribbble.com/dribbble\">@Dribbble</a>. Principal of SimpleBits. Aspiring clawhammer banjoist.",
         location: "Salem, MA",
         links: {
           web: "http://simplebits.com",

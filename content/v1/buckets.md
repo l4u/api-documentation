@@ -37,3 +37,14 @@ Creating a bucket requires the user to be authenticated with the `write` scope.
 
 <%= headers 201, Location: "https://api.dribbble.com/v1/buckets/2754" %>
 <%= json(:bucket) %>
+
+## Delete a bucket
+
+    DELETE /buckets/:id
+
+Deleting a bucket requires the user to be authenticated with the `write`
+scope. The authenticated user must also own the bucket.
+
+### Response
+
+<%= headers 204 %>

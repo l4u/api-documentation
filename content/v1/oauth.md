@@ -100,11 +100,13 @@ The redirect URL's path must reference a subdirectory of the callback URL.
 
     GOOD: http://example.com/path
     GOOD: http://example.com/path/subdir/other
+    GOOD: myapplication://phone-callback
     BAD:  http://example.com/
     BAD:  http://example.com/bar
     BAD:  http://example.com:8080/path
     BAD:  http://oauth.example.com:8080/path
     BAD:  http://example.org
+    BAD:  ssh://example.com
 
 ## Scopes
 

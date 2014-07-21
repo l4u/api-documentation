@@ -43,6 +43,7 @@ module Dribbble
         type: "User",
         pro: true,
         followers_url: "https://dribbble.com/v1/users/1/followers",
+        following_url: "https://dribbble.com/v1/users/1/following",
         likes_url: "https://dribbble.com/v1/users/1/likes",
         shots_url: "https://dribbble.com/v1/users/1/shots",
         teams_url: "https://dribbble.com/v1/users/1/teams",

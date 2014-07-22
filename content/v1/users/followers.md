@@ -20,7 +20,7 @@ List the authenticated user's followers:
 ### Response
 
 <%= headers 200 %>
-<%= json(:user) { |hash| [hash] } %>
+<%= json(:following_with_follower) { |hash| [hash] } %>
 
 ## List users followed by a user
 
@@ -35,7 +35,7 @@ List who the authenticated user is following:
 ### Response
 
 <%= headers 200 %>
-<%= json(:user) { |hash| [hash] } %>
+<%= json(:following_with_followee) { |hash| [hash] } %>
 
 ## Check if you are following a user
 

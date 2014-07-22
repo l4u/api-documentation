@@ -81,6 +81,8 @@ module Dribbble
         id: 471756,
         title: "Sasquatch",
         description: "<p>Quick, messy, five minute sketch of something that might become a fictional something.</p>",
+        width: 400,
+        height: 300,
         images: {
           hidpi: nil,
           normal: "https://d13yacurqjgara.cloudfront.net/users/1/screenshots/471756/sasquatch.png",
@@ -108,6 +110,8 @@ module Dribbble
         id: 472178,
         title: "Vector Victor",
         description: "<p>Rough vectoring begins.</p>",
+        width: 400,
+        height: 300,
         images: {
           hidpi: nil,
           normal: "https://d13yacurqjgara.cloudfront.net/users/1/screenshots/472178/vector-victor.png",

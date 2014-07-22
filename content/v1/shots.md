@@ -88,6 +88,17 @@ title: Shots | Dribbble API
 
     GET /shots/:id
 
+#### Images
+
+The `normal` image is typically 400x300, but may be smaller if created before
+October 4th, 2012. The `width` and `height` provide the size of the `normal`
+image.
+
+The `hidpi` image may or may not be present, but will always be 800x600.
+
+The `teaser` image is typically 200x150, but may be smaller if created before
+October 4th, 2012.
+
 ### Response
 
 <%= headers 200 %>

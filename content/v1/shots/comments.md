@@ -107,7 +107,7 @@ Liking a comment requires the user to be authenticated with the `write` scope.
 <%= headers 201 %>
 <%= json :like %>
 
-## Unike a comment
+## Unlike a comment
 
     DELETE /shots/:shot/comments/:id/like
 

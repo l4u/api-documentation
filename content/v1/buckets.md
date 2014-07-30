@@ -1,5 +1,5 @@
 ---
-title: Buckets | Dribbble API
+title: Buckets
 ---
 
 # Buckets

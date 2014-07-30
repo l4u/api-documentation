@@ -1,5 +1,5 @@
 ---
-title: Shots - Likes | Dribbble API
+title: Shots - Likes
 ---
 
 # Likes

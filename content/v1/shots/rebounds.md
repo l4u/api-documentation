@@ -1,5 +1,5 @@
 ---
-title: Shots - Rebounds | Dribbble API
+title: Shots - Rebounds
 ---
 
 # Rebounds

@@ -1,5 +1,5 @@
 ---
-title: Users - Followers | Dribbble API
+title: Users - Followers
 ---
 
 # Followers

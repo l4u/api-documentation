@@ -1,5 +1,5 @@
 ---
-title: Media Types | Dribbble API
+title: Media Types
 ---
 
 # Media Types

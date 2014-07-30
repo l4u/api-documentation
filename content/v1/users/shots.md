@@ -1,5 +1,5 @@
 ---
-title: Users - Shots | Dribbble API
+title: Users - Shots
 ---
 
 # Shots

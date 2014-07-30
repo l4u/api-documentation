@@ -1,5 +1,5 @@
 ---
-title: Users | Dribbble API
+title: Users
 ---
 
 # Users

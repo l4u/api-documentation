@@ -1,5 +1,5 @@
 ---
-title: OAuth | Dribbble API
+title: OAuth
 ---
 
 # OAuth

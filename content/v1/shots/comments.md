@@ -1,5 +1,5 @@
 ---
-title: Shots - Comments | Dribbble API
+title: Shots - Comments
 ---
 
 # Comments

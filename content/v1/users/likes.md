@@ -1,5 +1,5 @@
 ---
-title: Users - Likes | Dribbble API
+title: Users - Likes
 ---
 
 # Likes

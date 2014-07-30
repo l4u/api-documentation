@@ -1,5 +1,5 @@
 ---
-title: Shots - Attachments | Dribbble API
+title: Shots - Attachments
 ---
 
 # Attachments

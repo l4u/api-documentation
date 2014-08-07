@@ -108,7 +108,28 @@ October 4th, 2012.
 
     POST /shots
 
-COMING SOON
+Creating a shot requires the user to be authenticated with the `upload` scope.
+The authenticated user must also be a player or team.
+
+### Parameters
+
+| Name | Type | Description |
+|------|------|-------------|
+| `title` | `string` | **Required.** The title of the shot. |
+| `image` | `file` | **Required.** The image file.<br><br>It must be exactly 400x300 or 800x600, no larger than eight megabytes, and be a GIF, JPG, or PNG. |
+| `description` | `string` | A description of the shot. |
+| `tags` | `array` | Tags for the shot.<br><br>Limited to a maximum of 12 tags. |
+| `team_id` | `integer` | An ID of a team to associate the shot with.<br><br>The authenticated user must either be a member of the team or be authenticated as the same team. |
+| `rebound_source_id` | `integer` | An ID of a shot that the new shot is a rebound of.<br><br>The shot must be reboundable and by a user not blocking the authenticated user. |
+
+### Response
+
+Creating a shot happens asynchronously. After creation the returned location
+will return a `404 Not Found` until processing is completed. If this takes
+longer than five minutes, be sure to [contact
+support](https://dribbble.com/contact?api).
+
+<%= headers 202, Location: "https://api.dribbble.com/v1/shots/471756" %>
 
 ## Update a shot
 

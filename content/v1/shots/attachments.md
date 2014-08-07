@@ -28,7 +28,7 @@ member of a team.
 
 | Name | Type | Description |
 |------|------|-------------|
-| `file` | `file` | **Required.** The attachment file. |
+| `file` | `file` | **Required.** The attachment file.<br><br>It must be no larger than 10 megabytes. |
 
 ### Response
 

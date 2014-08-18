@@ -14,7 +14,7 @@ title: Buckets
 ### Response
 
 <%= headers 200 %>
-<%= json :bucket %>
+<%= json :bucket_with_user %>
 
 ## Create a bucket
 

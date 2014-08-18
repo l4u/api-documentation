@@ -14,4 +14,4 @@ title: Shots - Buckets
 ### Response
 
 <%= headers 200 %>
-<%= json(:bucket) { |hash| [hash] } %>
+<%= json(:bucket_with_user) { |hash| [hash] } %>

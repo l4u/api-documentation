@@ -181,6 +181,8 @@ module Dribbble
         updated_at: "2014-02-21T16:37:12Z"
       }
 
+      BUCKET_WITH_USER = BUCKET.merge(user: USER)
+
       def headers(status, headers = {})
         class_name = "headers"
         class_name << " no-response" if [204, 404].include?(status)

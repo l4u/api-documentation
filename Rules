@@ -10,36 +10,19 @@ end
 compile "/static/*" do
 end
 
-compile "/v1/*" do
-  filter :erb
-  filter :kramdown, toc_levels: [2]
-  filter :colorize_syntax, colorizers: { javascript: :pygmentsrb }
+{ "/v1/*"      => "api",
+  "/terms/*"   => "terms",
+  "/changes/*" => "changes",
+  "*"          => "default"
+}.each do |path, default_layout|
+  compile(path) do
+    filter :erb
+    filter :kramdown, toc_levels: [2]
+    filter :colorize_syntax, colorizers: { javascript: :pygmentsrb }
 
-  layout item[:layout] || "api"
-end
-
-compile "/terms/*" do
-  filter :erb
-  filter :kramdown, toc_levels: [2]
-  filter :colorize_syntax, colorizers: { javascript: :pygmentsrb }
-
-  layout item[:layout] || "terms"
-end
-
-compile "/changes/*/" do
-  filter :erb
-  filter :kramdown, toc_levels: [2]
-  filter :colorize_syntax, colorizers: { javascript: :pygmentsrb }
-
-  layout item[:layout] || "changes"
-end
-
-compile "*" do
-  filter :erb
-  filter :kramdown, toc_levels: [2]
-
-  unless item[:layout] == false
-    layout item[:layout] || "default"
+    unless item[:layout] == false
+      layout item[:layout] || default_layout
+    end
   end
 end
 
@@ -47,12 +30,11 @@ route '/feed' do
   '/changes.atom'
 end
 
-route "/assets/css/*" do
-  "/" + item.identifier.chop[8.. -1] + ".css"
-end
+route "/assets/*" do
+  path = item.identifier.chop[8..-1]
+  type = path.split("/").first
 
-route "/assets/js/*" do
-  "/" + item.identifier.chop[8.. -1] + ".js"
+  "/" + path + "." + type
 end
 
 route "/static/*" do

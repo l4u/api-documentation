@@ -37,6 +37,19 @@ List who the authenticated user is following:
 <%= headers 200 %>
 <%= json(:following_with_followee) { |hash| [hash] } %>
 
+## List shots for users followed by a user
+
+    GET /user/following/shots
+
+Listing shots from followed users requires the user to be authenticated with the
+`public` scope. Also note that you can not retrieve more than 600 results,
+regardless of the number requested per page.
+
+### Response
+
+<%= headers 200 %>
+<%= json(:shot) { |hash| [hash] } %>
+
 ## Check if you are following a user
 
     GET /user/following/:user

@@ -32,6 +32,7 @@ In particular, do not use the API, or any Dribbble data, to build the following:
 - A search service for finding designers or designers for hire
 - Tools for hiring designers or contacting designers for hire
 - A job advertising or job search service
+- A website or service that displays member profiles or portfolios **except** where a member has authorized the use of their data for such a service via OAuth. See [Portfolios](#portfolios) for details.
 
 We'll do our best to communicate fair use of the Dribbble API in this space and
 others, but the onus is on you to contact us and inquire whether your use of the
@@ -79,12 +80,11 @@ innovation, particularly in the mobile application space.
 ## Portfolios
 
 Many designers use their Dribbble profile as a portfolio of sorts. Additionally,
-we plan to offer a portfolio service called Playbook in the near future. Having
-said that, our members own their own content, and if they wish to display it
-using a website or service that uses the API, that is their right. However, such
-a website or service may not offer any of the restricted features above, such as
-social networking and search for designers or designers for hire, or it will be
-considered a competing offering and be disallowed.
+we plan to offer a portfolio service called Playbook in the near future. Having said that, while a portfolio service may compete with our own offerings, our members own their work and if they wish to display it using a website or service that uses the API, that is their right.
+
+A website or service may publish member profiles or portfolios containing Dribbble data with the restriction that **a member must authorize the use of their data via OAuth**. Your site or service may not create or display a profile or portfolio for a member without their authorization.
+
+Additionally, a profile or portfolio website or service may not offer any of the restricted features above, such as social networking and search for designers, or it will be considered a service that attempts to replace or compete with Dribbble and disallowed.
 
 ## Automation
 

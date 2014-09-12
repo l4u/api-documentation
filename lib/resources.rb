@@ -183,6 +183,17 @@ module Dribbble
 
       BUCKET_WITH_USER = BUCKET.merge(user: USER)
 
+      PROJECT = {
+        id: 3,
+        name: "Web Standards Sherpa",
+        description: "I did visual design and art direction for this project, working with the <a href=\"http://webstandards.org\">Web Standards Project</a> and Microsoft.",
+        shots_count: 4,
+        created_at: "2011-04-14T03:43:47Z",
+        updated_at: "2012-04-04T22:39:53Z"
+      }
+
+      PROJECT_WITH_USER = PROJECT.merge(user: USER)
+
       def headers(status, headers = {})
         class_name = "headers"
         class_name << " no-response" if [204, 404].include?(status)

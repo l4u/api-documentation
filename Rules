@@ -10,6 +10,9 @@ end
 compile "/static/*" do
 end
 
+compile 'CNAME' do
+end
+
 { "/v1/*"      => "api",
   "/terms/*"   => "terms",
   "/changes/*" => "changes",
@@ -39,6 +42,10 @@ end
 
 route "/static/*" do
   item.identifier[7..-2]
+end
+
+route '/CNAME/' do
+  '/CNAME'
 end
 
 route "*" do

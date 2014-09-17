@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Shots - Attachments | Dribbble API</title>
+
+  <link href="/css/application.css" rel="stylesheet" type="text/css">
+
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="alternate" type="application/atom+xml" title="API Changes" href="/changes.atom">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>
+      <a href="http://dribbble.com" id="logo">Dribbble</a>
+      <span id="logo-meta"><a href="/">Developer</a></span>
+    </h1>
+
+    <nav>
+      <ul>
+        <li><a href="/v1/" class="active">API</a></li>
+        <li><a href="/terms/">Terms &amp; Guidelines</a></li>
+        <li><a href="/changes/">Changes</a></li>
+        <li><a href="http://dribbble.com/contact?api">Support</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<section>
+  <div class="container">
+    <article>
+      
+<h1 id="attachments">Attachments</h1>
+
+<ul id="markdown-toc">
+  <li><a href="#list-attachments-for-a-shot">List attachments for a shot</a></li>
+  <li><a href="#create-an-attachment">Create an attachment</a></li>
+  <li><a href="#get-a-single-attachment">Get a single attachment</a></li>
+  <li><a href="#delete-an-attachment">Delete an attachment</a></li>
+</ul>
+
+<h2 id="list-attachments-for-a-shot">List attachments for a shot</h2>
+
+<pre><code>GET /shots/:id/attachments
+</code></pre>
+
+<h3 id="response">Response</h3>
+
+<pre class="headers"><code>Status: 200 OK
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 59</code></pre>
+
+<pre><code class="language-javascript"><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="s2">"id"</span> <span class="o">:</span> <span class="mi">206165</span><span class="p">,</span>
+    <span class="s2">"url"</span> <span class="o">:</span> <span class="s2">"https://d13yacurqjgara.cloudfront.net/users/1/screenshots/1412410/attachments/206165/weathered-ball-detail.jpg"</span><span class="p">,</span>
+    <span class="s2">"size"</span> <span class="o">:</span> <span class="mi">116375</span><span class="p">,</span>
+    <span class="s2">"views_count"</span> <span class="o">:</span> <span class="mi">325</span><span class="p">,</span>
+    <span class="s2">"created_at"</span> <span class="o">:</span> <span class="s2">"2014-02-07T16:35:09Z"</span>
+  <span class="p">}</span>
+<span class="p">]</span></code></pre>
+
+<h2 id="create-an-attachment">Create an attachment</h2>
+
+<pre><code>POST /shots/:shot/attachments
+</code></pre>
+
+<p>Creating an attachment requires the user to be authenticated with the <code>upload</code>
+scope. The authenticated user must own the shot and be a pro, a team, or a
+member of a team.</p>
+
+<h3 id="parameters">Parameters</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>file</code></td>
+      <td><code>file</code></td>
+      <td>
+<strong>Required.</strong> The attachment file.<br><br>It must be no larger than 10 megabytes.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="response-1">Response</h3>
+
+<p>Creating an attachment happens asynchronously. After creation the returned
+location will return a <code>404 Not Found</code> until processing is completed. If this
+takes longer than five minutes, be sure to <a href="https://dribbble.com/contact?api">contact
+support</a>.</p>
+
+<pre class="headers"><code>Status: 202 Accepted
+Location: https://api.dribbble.com/v1/shots/471756/attachments/73829
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 59</code></pre>
+
+<h2 id="get-a-single-attachment">Get a single attachment</h2>
+
+<pre><code>GET /shots/:shot/attachments/:id
+</code></pre>
+
+<h3 id="response-2">Response</h3>
+
+<pre class="headers"><code>Status: 200 OK
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 59</code></pre>
+
+<pre><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"id"</span> <span class="o">:</span> <span class="mi">206165</span><span class="p">,</span>
+  <span class="s2">"url"</span> <span class="o">:</span> <span class="s2">"https://d13yacurqjgara.cloudfront.net/users/1/screenshots/1412410/attachments/206165/weathered-ball-detail.jpg"</span><span class="p">,</span>
+  <span class="s2">"size"</span> <span class="o">:</span> <span class="mi">116375</span><span class="p">,</span>
+  <span class="s2">"views_count"</span> <span class="o">:</span> <span class="mi">325</span><span class="p">,</span>
+  <span class="s2">"created_at"</span> <span class="o">:</span> <span class="s2">"2014-02-07T16:35:09Z"</span>
+<span class="p">}</span></code></pre>
+
+<h2 id="delete-an-attachment">Delete an attachment</h2>
+
+<pre><code>DELETE /shots/:shot/attachments/:id
+</code></pre>
+
+<p>Deleting an attachment requires the user to be authenticated with the <code>upload</code>
+scope. The authenticated user must also own the attachment.</p>
+
+<h3 id="response-3">Response</h3>
+
+<pre class="headers no-response"><code>Status: 204 No Content
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 59</code></pre>
+
+
+    </article>
+
+    <aside id="sidebar">
+  <nav>
+    <ul>
+      <li>
+        <a href="/v1/">Overview</a>
+
+        <ul>
+          <li><a href="/v1/media/">Media Types</a></li>
+          <li><a href="/v1/oauth/">OAuth</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/v1/buckets/">Buckets</a>
+
+        <ul>
+          <li><a href="/v1/buckets/shots/">Shots</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/v1/projects/">Projects</a>
+
+        <ul>
+          <li><a href="/v1/projects/shots/">Shots</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/v1/shots/">Shots</a>
+
+        <ul>
+          <li><a href="/v1/shots/attachments/">Attachments</a></li>
+          <li><a href="/v1/shots/buckets/">Buckets</a></li>
+          <li><a href="/v1/shots/comments/">Comments</a></li>
+          <li><a href="/v1/shots/likes/">Likes</a></li>
+          <li><a href="/v1/shots/projects/">Projects</a></li>
+          <li><a href="/v1/shots/rebounds/">Rebounds</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/v1/users/">Users</a>
+
+        <ul>
+          <li><a href="/v1/users/buckets/">Buckets</a></li>
+          <li><a href="/v1/users/followers/">Followers</a></li>
+          <li><a href="/v1/users/likes/">Likes</a></li>
+          <li><a href="/v1/users/projects/">Projects</a></li>
+          <li><a href="/v1/users/shots/">Shots</a></li>
+          <li><a href="/v1/users/teams/">Teams</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="fork-me">
+    This website is a <a href="https://github.com/dribbble/api-documentation">public GitHub repository</a>. Please help us by forking the project and adding to it.
+  </div>
+</aside>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Except where otherwise noted, content on this site is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons CC-BY license</a>.</p>
+
+    <p class="links">
+      <a href="https://dribbble.com/dribbble"><img src="/images/icon-team-dribbble.png" />Dribbble on Dribbble</a>
+      <a href="https://github.com/dribbble"><img src="/images/icon-github.png" />Dribbble on GitHub</a>
+      <a href="https://twitter.com/dribbbleapi" class="twitter"><img src="/images/icon-twitter.png" />@dribbbleapi</a>
+    </p>
+  </div>
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="/js/application.js"></script>
+
+</body>
+</html>
+

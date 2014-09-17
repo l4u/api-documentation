@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Media Types | Dribbble API</title>
+
+  <link href="/css/application.css" rel="stylesheet" type="text/css">
+
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="alternate" type="application/atom+xml" title="API Changes" href="/changes.atom">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>
+      <a href="http://dribbble.com" id="logo">Dribbble</a>
+      <span id="logo-meta"><a href="/">Developer</a></span>
+    </h1>
+
+    <nav>
+      <ul>
+        <li><a href="/v1/" class="active">API</a></li>
+        <li><a href="/terms/">Terms &amp; Guidelines</a></li>
+        <li><a href="/changes/">Changes</a></li>
+        <li><a href="http://dribbble.com/contact?api">Support</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<section>
+  <div class="container">
+    <article>
+      
+<h1 id="media-types">Media Types</h1>
+
+<ul id="markdown-toc">
+  <li><a href="#comment-body-property">Comment Body Property</a></li>
+  <li><a href="#shot-description-property">Shot Description Property</a></li>
+</ul>
+
+<p>Custom media types are used in the API to let consumers choose the format of the
+data they wish to receive. This is done by adding one of the following types to
+the <code>Accept</code> header when you make a request. Media types are specific to
+resources, allowing them to change independently and support formats that other
+resources don’t.</p>
+
+<p>A version is currently required and only supports <code>v1</code>, but may change in the
+future. All Dribbble media types look like this:</p>
+
+<pre><code>application/vnd.dribbble.v1.param+json
+</code></pre>
+
+<h2 id="comment-body-property">Comment Body Property</h2>
+
+<p>The body of a comment can be written with some HTML, such as links, and may
+include auto-linked URLs and username mentions.</p>
+
+<h3 id="html">HTML</h3>
+
+<p>Returns HTML rendered from the body, which includes auto-linking URLs and
+username mentions. Response will include a <code>body</code> attribute. This is the default
+if you do not pass any specific media type.</p>
+
+<pre><code>application/vnd.dribbble.v1.html+json
+</code></pre>
+
+<h3 id="text">Text</h3>
+
+<p>Returns a mostly text representation of the body, which is what we display in a
+textarea when a user is editing a comment. It may contain some HTML if the user
+provided any, but no auto-linking or mention links will be included. Response
+will include a <code>body_text</code> attribute.</p>
+
+<pre><code>application/vnd.dribbble.v1.text+json
+</code></pre>
+
+<h2 id="shot-description-property">Shot Description Property</h2>
+
+<p>The description of a shot can be written with some HTML, such as links, and may
+include auto-linked URLs and username mentions. The property is identical to a
+comment body property, apart from the property name.</p>
+
+<h3 id="html-1">HTML</h3>
+
+<p>Returns HTML rendered from the body, which includes auto-linking URLs and
+username mentions. Response will include a <code>description</code> attribute. This is the
+default if you do not pass any specific media type.</p>
+
+<pre><code>application/vnd.dribbble.v1.html+json
+</code></pre>
+
+<h3 id="text-1">Text</h3>
+
+<p>Returns a mostly text representation of the description, which is what we
+display in a textarea when a user is editing a description. It may contain some
+HTML if the user provided any, but no auto-linking or mention links will be
+included. Response will include a <code>description_text</code> attribute.</p>
+
+<pre><code>application/vnd.dribbble.v1.text+json
+</code></pre>
+
+    </article>
+
+    <aside id="sidebar">
+  <nav>
+    <ul>
+      <li>
+        <a href="/v1/">Overview</a>
+
+        <ul>
+          <li><a href="/v1/media/">Media Types</a></li>
+          <li><a href="/v1/oauth/">OAuth</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/v1/buckets/">Buckets</a>
+
+        <ul>
+          <li><a href="/v1/buckets/shots/">Shots</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/v1/projects/">Projects</a>
+
+        <ul>
+          <li><a href="/v1/projects/shots/">Shots</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/v1/shots/">Shots</a>
+
+        <ul>
+          <li><a href="/v1/shots/attachments/">Attachments</a></li>
+          <li><a href="/v1/shots/buckets/">Buckets</a></li>
+          <li><a href="/v1/shots/comments/">Comments</a></li>
+          <li><a href="/v1/shots/likes/">Likes</a></li>
+          <li><a href="/v1/shots/projects/">Projects</a></li>
+          <li><a href="/v1/shots/rebounds/">Rebounds</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/v1/users/">Users</a>
+
+        <ul>
+          <li><a href="/v1/users/buckets/">Buckets</a></li>
+          <li><a href="/v1/users/followers/">Followers</a></li>
+          <li><a href="/v1/users/likes/">Likes</a></li>
+          <li><a href="/v1/users/projects/">Projects</a></li>
+          <li><a href="/v1/users/shots/">Shots</a></li>
+          <li><a href="/v1/users/teams/">Teams</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="fork-me">
+    This website is a <a href="https://github.com/dribbble/api-documentation">public GitHub repository</a>. Please help us by forking the project and adding to it.
+  </div>
+</aside>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Except where otherwise noted, content on this site is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons CC-BY license</a>.</p>
+
+    <p class="links">
+      <a href="https://dribbble.com/dribbble"><img src="/images/icon-team-dribbble.png" />Dribbble on Dribbble</a>
+      <a href="https://github.com/dribbble"><img src="/images/icon-github.png" />Dribbble on GitHub</a>
+      <a href="https://twitter.com/dribbbleapi" class="twitter"><img src="/images/icon-twitter.png" />@dribbbleapi</a>
+    </p>
+  </div>
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="/js/application.js"></script>
+
+</body>
+</html>
+

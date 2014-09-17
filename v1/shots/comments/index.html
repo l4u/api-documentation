@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Shots - Comments | Dribbble API</title>
+
+  <link href="/css/application.css" rel="stylesheet" type="text/css">
+
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="alternate" type="application/atom+xml" title="API Changes" href="/changes.atom">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>
+      <a href="http://dribbble.com" id="logo">Dribbble</a>
+      <span id="logo-meta"><a href="/">Developer</a></span>
+    </h1>
+
+    <nav>
+      <ul>
+        <li><a href="/v1/" class="active">API</a></li>
+        <li><a href="/terms/">Terms &amp; Guidelines</a></li>
+        <li><a href="/changes/">Changes</a></li>
+        <li><a href="http://dribbble.com/contact?api">Support</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<section>
+  <div class="container">
+    <article>
+      
+<h1 id="comments">Comments</h1>
+
+<ul id="markdown-toc">
+  <li><a href="#list-comments-for-a-shot">List comments for a shot</a></li>
+  <li><a href="#list-likes-for-a-comment">List likes for a comment</a></li>
+  <li><a href="#create-a-comment">Create a comment</a></li>
+  <li><a href="#get-a-single-comment">Get a single comment</a></li>
+  <li><a href="#update-a-comment">Update a comment</a></li>
+  <li><a href="#delete-a-comment">Delete a comment</a></li>
+  <li><a href="#check-if-you-like-a-comment">Check if you like a comment</a></li>
+  <li><a href="#like-a-comment">Like a comment</a></li>
+  <li><a href="#unlike-a-comment">Unlike a comment</a></li>
+</ul>
+
+<h2 id="list-comments-for-a-shot">List comments for a shot</h2>
+
+<pre><code>GET /shots/:shot/comments
+</code></pre>
+
+<h3 id="response">Response</h3>
+
+<pre class="headers"><code>Status: 200 OK
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 59</code></pre>
+
+<pre><code class="language-javascript"><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="s2">"id"</span> <span class="o">:</span> <span class="mi">1145736</span><span class="p">,</span>
+    <span class="s2">"body"</span> <span class="o">:</span> <span class="s2">"&lt;p&gt;Could he somehow make the shape of an \"S\" with his arms? I feel like i see potential for some hidden shapes in here...&lt;/p&gt;\n\n&lt;p&gt;Looks fun!\n&lt;/p&gt;"</span><span class="p">,</span>
+    <span class="s2">"likes_count"</span> <span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">"likes_url"</span> <span class="o">:</span> <span class="s2">"https://api.dribbble.com/v1/shots/471756/comments/1145736/likes"</span><span class="p">,</span>
+    <span class="s2">"created_at"</span> <span class="o">:</span> <span class="s2">"2012-03-15T04:24:39Z"</span><span class="p">,</span>
+    <span class="s2">"updated_at"</span> <span class="o">:</span> <span class="s2">"2012-03-15T04:24:39Z"</span><span class="p">,</span>
+    <span class="s2">"user"</span> <span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"id"</span> <span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"name"</span> <span class="o">:</span> <span class="s2">"Dan Cederholm"</span><span class="p">,</span>
+      <span class="s2">"username"</span> <span class="o">:</span> <span class="s2">"simplebits"</span><span class="p">,</span>
+      <span class="s2">"html_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/simplebits"</span><span class="p">,</span>
+      <span class="s2">"avatar_url"</span> <span class="o">:</span> <span class="s2">"https://d13yacurqjgara.cloudfront.net/users/1/avatars/normal/dc.jpg?1371679243"</span><span class="p">,</span>
+      <span class="s2">"bio"</span> <span class="o">:</span> <span class="s2">"Co-founder &amp;amp; designer of &lt;a href=\"https://dribbble.com/dribbble\"&gt;@Dribbble&lt;/a&gt;. Principal of SimpleBits. Aspiring clawhammer banjoist."</span><span class="p">,</span>
+      <span class="s2">"location"</span> <span class="o">:</span> <span class="s2">"Salem, MA"</span><span class="p">,</span>
+      <span class="s2">"links"</span> <span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"web"</span> <span class="o">:</span> <span class="s2">"http://simplebits.com"</span><span class="p">,</span>
+        <span class="s2">"twitter"</span> <span class="o">:</span> <span class="s2">"https://twitter.com/simplebits"</span>
+      <span class="p">},</span>
+      <span class="s2">"followers_count"</span> <span class="o">:</span> <span class="mi">29262</span><span class="p">,</span>
+      <span class="s2">"followings_count"</span> <span class="o">:</span> <span class="mi">1728</span><span class="p">,</span>
+      <span class="s2">"likes_count"</span> <span class="o">:</span> <span class="mi">34954</span><span class="p">,</span>
+      <span class="s2">"shots_count"</span> <span class="o">:</span> <span class="mi">214</span><span class="p">,</span>
+      <span class="s2">"type"</span> <span class="o">:</span> <span class="s2">"User"</span><span class="p">,</span>
+      <span class="s2">"pro"</span> <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="s2">"buckets_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/buckets"</span><span class="p">,</span>
+      <span class="s2">"followers_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/followers"</span><span class="p">,</span>
+      <span class="s2">"following_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/following"</span><span class="p">,</span>
+      <span class="s2">"likes_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/likes"</span><span class="p">,</span>
+      <span class="s2">"shots_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/shots"</span><span class="p">,</span>
+      <span class="s2">"teams_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/teams"</span><span class="p">,</span>
+      <span class="s2">"created_at"</span> <span class="o">:</span> <span class="s2">"2009-07-08T02:51:22Z"</span><span class="p">,</span>
+      <span class="s2">"updated_at"</span> <span class="o">:</span> <span class="s2">"2014-02-22T17:10:33Z"</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">]</span></code></pre>
+
+<h2 id="list-likes-for-a-comment">List likes for a comment</h2>
+
+<pre><code>GET /shots/:shot/comments/:id/likes
+</code></pre>
+
+<h3 id="response-1">Response</h3>
+
+<pre class="headers"><code>Status: 200 OK
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 59</code></pre>
+
+<pre><code class="language-javascript"><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="s2">"id"</span> <span class="o">:</span> <span class="mi">24400091</span><span class="p">,</span>
+    <span class="s2">"created_at"</span> <span class="o">:</span> <span class="s2">"2014-01-06T17:19:59Z"</span><span class="p">,</span>
+    <span class="s2">"user"</span> <span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"id"</span> <span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"name"</span> <span class="o">:</span> <span class="s2">"Dan Cederholm"</span><span class="p">,</span>
+      <span class="s2">"username"</span> <span class="o">:</span> <span class="s2">"simplebits"</span><span class="p">,</span>
+      <span class="s2">"html_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/simplebits"</span><span class="p">,</span>
+      <span class="s2">"avatar_url"</span> <span class="o">:</span> <span class="s2">"https://d13yacurqjgara.cloudfront.net/users/1/avatars/normal/dc.jpg?1371679243"</span><span class="p">,</span>
+      <span class="s2">"bio"</span> <span class="o">:</span> <span class="s2">"Co-founder &amp;amp; designer of &lt;a href=\"https://dribbble.com/dribbble\"&gt;@Dribbble&lt;/a&gt;. Principal of SimpleBits. Aspiring clawhammer banjoist."</span><span class="p">,</span>
+      <span class="s2">"location"</span> <span class="o">:</span> <span class="s2">"Salem, MA"</span><span class="p">,</span>
+      <span class="s2">"links"</span> <span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"web"</span> <span class="o">:</span> <span class="s2">"http://simplebits.com"</span><span class="p">,</span>
+        <span class="s2">"twitter"</span> <span class="o">:</span> <span class="s2">"https://twitter.com/simplebits"</span>
+      <span class="p">},</span>
+      <span class="s2">"followers_count"</span> <span class="o">:</span> <span class="mi">29262</span><span class="p">,</span>
+      <span class="s2">"followings_count"</span> <span class="o">:</span> <span class="mi">1728</span><span class="p">,</span>
+      <span class="s2">"likes_count"</span> <span class="o">:</span> <span class="mi">34954</span><span class="p">,</span>
+      <span class="s2">"shots_count"</span> <span class="o">:</span> <span class="mi">214</span><span class="p">,</span>
+      <span class="s2">"type"</span> <span class="o">:</span> <span class="s2">"User"</span><span class="p">,</span>
+      <span class="s2">"pro"</span> <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="s2">"buckets_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/buckets"</span><span class="p">,</span>
+      <span class="s2">"followers_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/followers"</span><span class="p">,</span>
+      <span class="s2">"following_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/following"</span><span class="p">,</span>
+      <span class="s2">"likes_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/likes"</span><span class="p">,</span>
+      <span class="s2">"shots_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/shots"</span><span class="p">,</span>
+      <span class="s2">"teams_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/teams"</span><span class="p">,</span>
+      <span class="s2">"created_at"</span> <span class="o">:</span> <span class="s2">"2009-07-08T02:51:22Z"</span><span class="p">,</span>
+      <span class="s2">"updated_at"</span> <span class="o">:</span> <span class="s2">"2014-02-22T17:10:33Z"</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">]</span></code></pre>
+
+<h2 id="create-a-comment">Create a comment</h2>
+
+<pre><code>POST /shots/:shot/comments
+</code></pre>
+
+<p>Creating a comment requires the user to be authenticated with the <code>comment</code>
+scope.</p>
+
+<p>Any username mentions, such as @simplebits, are automatically parsed and linked.</p>
+
+<h3 id="parameters">Parameters</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>body</code></td>
+      <td><code>string</code></td>
+      <td>
+<strong>Required.</strong> The contents of the comment.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="example">Example</h3>
+
+<pre><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"body"</span> <span class="o">:</span> <span class="s2">"&lt;p&gt;Could he somehow make the shape of an \"S\" with his arms? I feel like i see potential for some hidden shapes in here...&lt;/p&gt;\n\n&lt;p&gt;Looks fun!\n&lt;/p&gt;"</span>
+<span class="p">}</span></code></pre>
+
+<h3 id="response-2">Response</h3>
+
+<pre class="headers"><code>Status: 201 Created
+Location: https://api.dribbble.com/v1/shots/471756/comments/3360155
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 59</code></pre>
+
+<pre><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"id"</span> <span class="o">:</span> <span class="mi">1145736</span><span class="p">,</span>
+  <span class="s2">"body"</span> <span class="o">:</span> <span class="s2">"&lt;p&gt;Could he somehow make the shape of an \"S\" with his arms? I feel like i see potential for some hidden shapes in here...&lt;/p&gt;\n\n&lt;p&gt;Looks fun!\n&lt;/p&gt;"</span><span class="p">,</span>
+  <span class="s2">"likes_count"</span> <span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="s2">"likes_url"</span> <span class="o">:</span> <span class="s2">"https://api.dribbble.com/v1/shots/471756/comments/1145736/likes"</span><span class="p">,</span>
+  <span class="s2">"created_at"</span> <span class="o">:</span> <span class="s2">"2012-03-15T04:24:39Z"</span><span class="p">,</span>
+  <span class="s2">"updated_at"</span> <span class="o">:</span> <span class="s2">"2012-03-15T04:24:39Z"</span><span class="p">,</span>
+  <span class="s2">"user"</span> <span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"id"</span> <span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">"name"</span> <span class="o">:</span> <span class="s2">"Dan Cederholm"</span><span class="p">,</span>
+    <span class="s2">"username"</span> <span class="o">:</span> <span class="s2">"simplebits"</span><span class="p">,</span>
+    <span class="s2">"html_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/simplebits"</span><span class="p">,</span>
+    <span class="s2">"avatar_url"</span> <span class="o">:</span> <span class="s2">"https://d13yacurqjgara.cloudfront.net/users/1/avatars/normal/dc.jpg?1371679243"</span><span class="p">,</span>
+    <span class="s2">"bio"</span> <span class="o">:</span> <span class="s2">"Co-founder &amp;amp; designer of &lt;a href=\"https://dribbble.com/dribbble\"&gt;@Dribbble&lt;/a&gt;. Principal of SimpleBits. Aspiring clawhammer banjoist."</span><span class="p">,</span>
+    <span class="s2">"location"</span> <span class="o">:</span> <span class="s2">"Salem, MA"</span><span class="p">,</span>
+    <span class="s2">"links"</span> <span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"web"</span> <span class="o">:</span> <span class="s2">"http://simplebits.com"</span><span class="p">,</span>
+      <span class="s2">"twitter"</span> <span class="o">:</span> <span class="s2">"https://twitter.com/simplebits"</span>
+    <span class="p">},</span>
+    <span class="s2">"followers_count"</span> <span class="o">:</span> <span class="mi">29262</span><span class="p">,</span>
+    <span class="s2">"followings_count"</span> <span class="o">:</span> <span class="mi">1728</span><span class="p">,</span>
+    <span class="s2">"likes_count"</span> <span class="o">:</span> <span class="mi">34954</span><span class="p">,</span>
+    <span class="s2">"shots_count"</span> <span class="o">:</span> <span class="mi">214</span><span class="p">,</span>
+    <span class="s2">"type"</span> <span class="o">:</span> <span class="s2">"User"</span><span class="p">,</span>
+    <span class="s2">"pro"</span> <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">"buckets_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/buckets"</span><span class="p">,</span>
+    <span class="s2">"followers_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/followers"</span><span class="p">,</span>
+    <span class="s2">"following_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/following"</span><span class="p">,</span>
+    <span class="s2">"likes_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/likes"</span><span class="p">,</span>
+    <span class="s2">"shots_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/shots"</span><span class="p">,</span>
+    <span class="s2">"teams_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/teams"</span><span class="p">,</span>
+    <span class="s2">"created_at"</span> <span class="o">:</span> <span class="s2">"2009-07-08T02:51:22Z"</span><span class="p">,</span>
+    <span class="s2">"updated_at"</span> <span class="o">:</span> <span class="s2">"2014-02-22T17:10:33Z"</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+
+<h2 id="get-a-single-comment">Get a single comment</h2>
+
+<pre><code>GET /shots/:shot/comments/:id
+</code></pre>
+
+<h3 id="response-3">Response</h3>
+
+<pre class="headers"><code>Status: 200 OK
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 59</code></pre>
+
+<pre><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"id"</span> <span class="o">:</span> <span class="mi">1145736</span><span class="p">,</span>
+  <span class="s2">"body"</span> <span class="o">:</span> <span class="s2">"&lt;p&gt;Could he somehow make the shape of an \"S\" with his arms? I feel like i see potential for some hidden shapes in here...&lt;/p&gt;\n\n&lt;p&gt;Looks fun!\n&lt;/p&gt;"</span><span class="p">,</span>
+  <span class="s2">"likes_count"</span> <span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="s2">"likes_url"</span> <span class="o">:</span> <span class="s2">"https://api.dribbble.com/v1/shots/471756/comments/1145736/likes"</span><span class="p">,</span>
+  <span class="s2">"created_at"</span> <span class="o">:</span> <span class="s2">"2012-03-15T04:24:39Z"</span><span class="p">,</span>
+  <span class="s2">"updated_at"</span> <span class="o">:</span> <span class="s2">"2012-03-15T04:24:39Z"</span><span class="p">,</span>
+  <span class="s2">"user"</span> <span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"id"</span> <span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">"name"</span> <span class="o">:</span> <span class="s2">"Dan Cederholm"</span><span class="p">,</span>
+    <span class="s2">"username"</span> <span class="o">:</span> <span class="s2">"simplebits"</span><span class="p">,</span>
+    <span class="s2">"html_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/simplebits"</span><span class="p">,</span>
+    <span class="s2">"avatar_url"</span> <span class="o">:</span> <span class="s2">"https://d13yacurqjgara.cloudfront.net/users/1/avatars/normal/dc.jpg?1371679243"</span><span class="p">,</span>
+    <span class="s2">"bio"</span> <span class="o">:</span> <span class="s2">"Co-founder &amp;amp; designer of &lt;a href=\"https://dribbble.com/dribbble\"&gt;@Dribbble&lt;/a&gt;. Principal of SimpleBits. Aspiring clawhammer banjoist."</span><span class="p">,</span>
+    <span class="s2">"location"</span> <span class="o">:</span> <span class="s2">"Salem, MA"</span><span class="p">,</span>
+    <span class="s2">"links"</span> <span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"web"</span> <span class="o">:</span> <span class="s2">"http://simplebits.com"</span><span class="p">,</span>
+      <span class="s2">"twitter"</span> <span class="o">:</span> <span class="s2">"https://twitter.com/simplebits"</span>
+    <span class="p">},</span>
+    <span class="s2">"followers_count"</span> <span class="o">:</span> <span class="mi">29262</span><span class="p">,</span>
+    <span class="s2">"followings_count"</span> <span class="o">:</span> <span class="mi">1728</span><span class="p">,</span>
+    <span class="s2">"likes_count"</span> <span class="o">:</span> <span class="mi">34954</span><span class="p">,</span>
+    <span class="s2">"shots_count"</span> <span class="o">:</span> <span class="mi">214</span><span class="p">,</span>
+    <span class="s2">"type"</span> <span class="o">:</span> <span class="s2">"User"</span><span class="p">,</span>
+    <span class="s2">"pro"</span> <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">"buckets_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/buckets"</span><span class="p">,</span>
+    <span class="s2">"followers_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/followers"</span><span class="p">,</span>
+    <span class="s2">"following_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/following"</span><span class="p">,</span>
+    <span class="s2">"likes_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/likes"</span><span class="p">,</span>
+    <span class="s2">"shots_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/shots"</span><span class="p">,</span>
+    <span class="s2">"teams_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/teams"</span><span class="p">,</span>
+    <span class="s2">"created_at"</span> <span class="o">:</span> <span class="s2">"2009-07-08T02:51:22Z"</span><span class="p">,</span>
+    <span class="s2">"updated_at"</span> <span class="o">:</span> <span class="s2">"2014-02-22T17:10:33Z"</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+
+<h2 id="update-a-comment">Update a comment</h2>
+
+<pre><code>PUT /shots/:shot/comments/:id
+</code></pre>
+
+<p>Updating a comment requires the user to be authenticated with the <code>comment</code>
+scope. The authenticated user must also own the comment.</p>
+
+<h3 id="response-4">Response</h3>
+
+<pre class="headers"><code>Status: 200 OK
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 59</code></pre>
+
+<pre><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"id"</span> <span class="o">:</span> <span class="mi">1145736</span><span class="p">,</span>
+  <span class="s2">"body"</span> <span class="o">:</span> <span class="s2">"&lt;p&gt;Could he somehow make the shape of an \"S\" with his arms? I feel like i see potential for some hidden shapes in here...&lt;/p&gt;\n\n&lt;p&gt;Looks fun!\n&lt;/p&gt;"</span><span class="p">,</span>
+  <span class="s2">"likes_count"</span> <span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="s2">"likes_url"</span> <span class="o">:</span> <span class="s2">"https://api.dribbble.com/v1/shots/471756/comments/1145736/likes"</span><span class="p">,</span>
+  <span class="s2">"created_at"</span> <span class="o">:</span> <span class="s2">"2012-03-15T04:24:39Z"</span><span class="p">,</span>
+  <span class="s2">"updated_at"</span> <span class="o">:</span> <span class="s2">"2012-03-15T04:24:39Z"</span><span class="p">,</span>
+  <span class="s2">"user"</span> <span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"id"</span> <span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">"name"</span> <span class="o">:</span> <span class="s2">"Dan Cederholm"</span><span class="p">,</span>
+    <span class="s2">"username"</span> <span class="o">:</span> <span class="s2">"simplebits"</span><span class="p">,</span>
+    <span class="s2">"html_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/simplebits"</span><span class="p">,</span>
+    <span class="s2">"avatar_url"</span> <span class="o">:</span> <span class="s2">"https://d13yacurqjgara.cloudfront.net/users/1/avatars/normal/dc.jpg?1371679243"</span><span class="p">,</span>
+    <span class="s2">"bio"</span> <span class="o">:</span> <span class="s2">"Co-founder &amp;amp; designer of &lt;a href=\"https://dribbble.com/dribbble\"&gt;@Dribbble&lt;/a&gt;. Principal of SimpleBits. Aspiring clawhammer banjoist."</span><span class="p">,</span>
+    <span class="s2">"location"</span> <span class="o">:</span> <span class="s2">"Salem, MA"</span><span class="p">,</span>
+    <span class="s2">"links"</span> <span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"web"</span> <span class="o">:</span> <span class="s2">"http://simplebits.com"</span><span class="p">,</span>
+      <span class="s2">"twitter"</span> <span class="o">:</span> <span class="s2">"https://twitter.com/simplebits"</span>
+    <span class="p">},</span>
+    <span class="s2">"followers_count"</span> <span class="o">:</span> <span class="mi">29262</span><span class="p">,</span>
+    <span class="s2">"followings_count"</span> <span class="o">:</span> <span class="mi">1728</span><span class="p">,</span>
+    <span class="s2">"likes_count"</span> <span class="o">:</span> <span class="mi">34954</span><span class="p">,</span>
+    <span class="s2">"shots_count"</span> <span class="o">:</span> <span class="mi">214</span><span class="p">,</span>
+    <span class="s2">"type"</span> <span class="o">:</span> <span class="s2">"User"</span><span class="p">,</span>
+    <span class="s2">"pro"</span> <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">"buckets_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/buckets"</span><span class="p">,</span>
+    <span class="s2">"followers_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/followers"</span><span class="p">,</span>
+    <span class="s2">"following_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/following"</span><span class="p">,</span>
+    <span class="s2">"likes_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/likes"</span><span class="p">,</span>
+    <span class="s2">"shots_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/shots"</span><span class="p">,</span>
+    <span class="s2">"teams_url"</span> <span class="o">:</span> <span class="s2">"https://dribbble.com/v1/users/1/teams"</span><span class="p">,</span>
+    <span class="s2">"created_at"</span> <span class="o">:</span> <span class="s2">"2009-07-08T02:51:22Z"</span><span class="p">,</span>
+    <span class="s2">"updated_at"</span> <span class="o">:</span> <span class="s2">"2014-02-22T17:10:33Z"</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+
+<h2 id="delete-a-comment">Delete a comment</h2>
+
+<pre><code>DELETE /shots/:shot/comments/:id
+</code></pre>
+
+<p>Deleting a comment requires the user to be authenticated with the <code>comment</code>
+scope. The authenticated user must also own the comment.</p>
+
+<h3 id="response-5">Response</h3>
+
+<pre class="headers no-response"><code>Status: 204 No Content
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 59</code></pre>
+
+<h2 id="check-if-you-like-a-comment">Check if you like a comment</h2>
+
+<pre><code>GET /shots/:shot/comments/:id/like
+</code></pre>
+
+<p>Checking for a comment like requires the user to be authenticated.</p>
+
+<h3 id="response-if-the-user-likes-the-comment">Response, if the user likes the comment</h3>
+
+<pre class="headers"><code>Status: 200 OK
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 59</code></pre>
+
+<pre><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"id"</span> <span class="o">:</span> <span class="mi">24400091</span><span class="p">,</span>
+  <span class="s2">"created_at"</span> <span class="o">:</span> <span class="s2">"2014-01-06T17:19:59Z"</span>
+<span class="p">}</span></code></pre>
+
+<h3 id="response-if-the-user-does-not-like-the-comment">Response, if the user does not like the comment</h3>
+
+<pre class="headers no-response"><code>Status: 404 Not Found
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 59</code></pre>
+
+<h2 id="like-a-comment">Like a comment</h2>
+
+<pre><code>POST /shots/:shot/comments/:id/like
+</code></pre>
+
+<p>Liking a comment requires the user to be authenticated with the <code>write</code> scope.</p>
+
+<h3 id="response-6">Response</h3>
+
+<pre class="headers"><code>Status: 201 Created
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 59</code></pre>
+
+<pre><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"id"</span> <span class="o">:</span> <span class="mi">24400091</span><span class="p">,</span>
+  <span class="s2">"created_at"</span> <span class="o">:</span> <span class="s2">"2014-01-06T17:19:59Z"</span>
+<span class="p">}</span></code></pre>
+
+<h2 id="unlike-a-comment">Unlike a comment</h2>
+
+<pre><code>DELETE /shots/:shot/comments/:id/like
+</code></pre>
+
+<p>Unliking a comment requires the user to be authenticated with the <code>write</code> scope.</p>
+
+<h3 id="response-7">Response</h3>
+
+<pre class="headers no-response"><code>Status: 204 No Content
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 59</code></pre>
+
+
+    </article>
+
+    <aside id="sidebar">
+  <nav>
+    <ul>
+      <li>
+        <a href="/v1/">Overview</a>
+
+        <ul>
+          <li><a href="/v1/media/">Media Types</a></li>
+          <li><a href="/v1/oauth/">OAuth</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/v1/buckets/">Buckets</a>
+
+        <ul>
+          <li><a href="/v1/buckets/shots/">Shots</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/v1/projects/">Projects</a>
+
+        <ul>
+          <li><a href="/v1/projects/shots/">Shots</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/v1/shots/">Shots</a>
+
+        <ul>
+          <li><a href="/v1/shots/attachments/">Attachments</a></li>
+          <li><a href="/v1/shots/buckets/">Buckets</a></li>
+          <li><a href="/v1/shots/comments/">Comments</a></li>
+          <li><a href="/v1/shots/likes/">Likes</a></li>
+          <li><a href="/v1/shots/projects/">Projects</a></li>
+          <li><a href="/v1/shots/rebounds/">Rebounds</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/v1/users/">Users</a>
+
+        <ul>
+          <li><a href="/v1/users/buckets/">Buckets</a></li>
+          <li><a href="/v1/users/followers/">Followers</a></li>
+          <li><a href="/v1/users/likes/">Likes</a></li>
+          <li><a href="/v1/users/projects/">Projects</a></li>
+          <li><a href="/v1/users/shots/">Shots</a></li>
+          <li><a href="/v1/users/teams/">Teams</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="fork-me">
+    This website is a <a href="https://github.com/dribbble/api-documentation">public GitHub repository</a>. Please help us by forking the project and adding to it.
+  </div>
+</aside>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Except where otherwise noted, content on this site is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons CC-BY license</a>.</p>
+
+    <p class="links">
+      <a href="https://dribbble.com/dribbble"><img src="/images/icon-team-dribbble.png" />Dribbble on Dribbble</a>
+      <a href="https://github.com/dribbble"><img src="/images/icon-github.png" />Dribbble on GitHub</a>
+      <a href="https://twitter.com/dribbbleapi" class="twitter"><img src="/images/icon-twitter.png" />@dribbbleapi</a>
+    </p>
+  </div>
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="/js/application.js"></script>
+
+</body>
+</html>
+

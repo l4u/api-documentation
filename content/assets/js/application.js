@@ -1,17 +1,26 @@
 (function() {
-  var item = $("#sidebar nav")
-    .find("ul > li")
-      .addClass("collapsed")
-    .end()
-    .find("a[href='" + window.location.pathname + "']")
-      .parent("li")
-        .addClass("active")
-      .end()
-      .parents("li");
+  if (!document.querySelector) {
+    return;
+  }
 
-  if (item.children("ul").length > 0) {
-    item
-      .addClass("expanded")
-      .removeClass("collapsed");
+  var nav = document.querySelector("#sidebar nav"),
+      items = nav.querySelectorAll("ul > li"),
+      active = nav.querySelector("a[href='" + window.location.pathname + "']");
+
+  for (var index = 0; index < items.length; index++) {
+    items[index].className = "collapsed";
+  }
+
+  if (active) {
+    var item = active.parentNode,
+        parent = item.parentNode.parentNode;
+
+    item.className = "active";
+
+    if (parent.nodeName == "LI") {
+      parent.className = "active expanded";
+    } else {
+      item.className += " expanded";
+    }
   }
 })();

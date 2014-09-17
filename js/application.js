@@ -1,17 +1,1 @@
-(function() {
-  var item = $("#sidebar nav")
-    .find("ul > li")
-      .addClass("collapsed")
-    .end()
-    .find("a[href='" + window.location.pathname + "']")
-      .parent("li")
-        .addClass("active")
-      .end()
-      .parents("li");
-
-  if (item.children("ul").length > 0) {
-    item
-      .addClass("expanded")
-      .removeClass("collapsed");
-  }
-})();
+!function(){if(document.querySelector){for(var e=document.querySelector("#sidebar nav"),a=e.querySelectorAll("ul > li"),l=e.querySelector("a[href='"+window.location.pathname+"']"),o=0;o<a.length;o++)a[o].className="collapsed";if(l){var r=l.parentNode,c=r.parentNode.parentNode;r.className="active","LI"==c.nodeName?c.className="active expanded":r.className+=" expanded"}}}();

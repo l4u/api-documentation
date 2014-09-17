@@ -1,10 +1,11 @@
 #!/usr/bin/env ruby
 
 compile "/assets/css/*" do
-  filter :sass, syntax: :scss
+  filter :sass, syntax: :scss, style: :compressed
 end
 
 compile "/assets/js/*" do
+  filter :uglify_js
 end
 
 compile "/static/*" do

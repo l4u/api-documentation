@@ -9,6 +9,7 @@ gem "pygments.rb"
 gem "rake"
 gem "sass"
 gem "thin"
+gem "uglifier"
 gem "yajl-ruby"
 
 group :development do

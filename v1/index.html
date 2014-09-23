@@ -196,7 +196,7 @@ can also set a custom page size up to 100 with the <code>per_page</code> paramet
 that for technical reasons not all endpoints respect the <code>per_page</code> parameter.</p>
 
 <pre class="terminal">
-$ curl https://api.dribbble.com/user/followers?page=2&amp;per_page=100
+$ curl https://api.dribbble.com/v1/user/followers?page=2&amp;per_page=100
 </pre>
 
 <p>Note that omitting the <code>page</code> parameter will return the first page.</p>
@@ -208,8 +208,8 @@ header</a>. It is possible for some resources
 in the future to not be paginated based on page number, so it is important to
 follow these Link header values instead of constructing your own URLs.</p>
 
-<pre><code>Link: &lt;https://api.dribbble.com/user/followers?page=1&amp;per_page=100&gt;; rel="prev",
-  &lt;https://api.dribbble.com/user/followers?page=2&amp;per_page=100&gt;; rel="next"
+<pre><code>Link: &lt;https://api.dribbble.com/v1/user/followers?page=1&amp;per_page=100&gt;; rel="prev",
+  &lt;https://api.dribbble.com/v1/user/followers?page=2&amp;per_page=100&gt;; rel="next"
 </code></pre>
 
 <p>The possible <code>rel</code> values are:</p>
@@ -244,7 +244,7 @@ IP address.</p>
 per minute rate limit status:</p>
 
 <pre class="terminal">
-$ curl -i https://api.dribbble.com/users/simplebits
+$ curl -i https://api.dribbble.com/v1/users/simplebits
 
 HTTP/1.1 200 OK
 Status: 200 OK

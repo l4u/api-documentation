@@ -32,13 +32,11 @@ shot&lt;/a&gt; or &lt;a href="/v1/users/buckets/"&gt;for a user&lt;/a&gt;.&lt;/p
 &lt;p&gt;The followers and following endpoints no longer simply return a user. It now
 returns &lt;code&gt;id&lt;/code&gt; and &lt;code&gt;created_at&lt;/code&gt; attributes with the user nested in it. Depending
 on the endpoint the user will be under the &lt;code&gt;followee&lt;/code&gt; or &lt;code&gt;follower&lt;/code&gt; attribute.
-See the &lt;a href="http://localhost:5000/v1/users/followers/"&gt;followers documentation&lt;/a&gt; for
-updated examples.&lt;/p&gt;
+See the &lt;a href="/v1/users/followers/"&gt;followers documentation&lt;/a&gt; for updated examples.&lt;/p&gt;
 
 &lt;p&gt;The like endpoints were also previously changed to include &lt;code&gt;id&lt;/code&gt; and &lt;code&gt;created_at&lt;/code&gt;
-attributes, with the &lt;a href="http://localhost:5000/v1/shots/likes/#list-the-likes-for-a-shot"&gt;liking
-user&lt;/a&gt; or &lt;a href="http://localhost:5000/v1/users/likes/#list-shot-likes-for-a-user"&gt;liked
-shot&lt;/a&gt; nested.&lt;/p&gt;
+attributes, with the &lt;a href="/v1/shots/likes/#list-the-likes-for-a-shot"&gt;liking user&lt;/a&gt;
+or &lt;a href="/v1/users/likes/#list-shot-likes-for-a-user"&gt;liked shot&lt;/a&gt; nested.&lt;/p&gt;
 </content>
   </entry>
   <entry>

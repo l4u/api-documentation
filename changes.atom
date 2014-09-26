@@ -2,13 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>http://developer.dribbble.com/</id>
   <title>Dribbble API Changes</title>
-  <updated>2014-08-21T09:15:00Z</updated>
+  <updated>2014-09-26T12:30:00Z</updated>
   <link rel="alternate" href="http://developer.dribbble.com/">
   <link rel="self" href="http://developer.dribbble.com/changes.atom">
   <author>
     <name>dribbble</name>
     <uri>https://dribbble.com</uri>
   </author>
+  <entry>
+    <id>tag:developer.dribbble.com,2014-09-26:/changes/2014-09-26-attachment-content-type/</id>
+    <title type="html">Attachment Content Type</title>
+    <published>2014-09-26T12:30:00Z</published>
+    <updated>2014-09-26T12:30:00Z</updated>
+    <link rel="alternate" href="http://developer.dribbble.com/changes/2014-09-26-attachment-content-type/">
+    <content type="html">
+&lt;p&gt;&lt;a href="/v1/shots/attachments/"&gt;Attachments&lt;/a&gt; now include a &lt;code&gt;content_type&lt;/code&gt; attribute, so
+there’s no need to parse the extension of the &lt;code&gt;url&lt;/code&gt; or perform a HEAD request to
+determine it. If you’re showing attachment previews it should be much easier to
+do so now.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <id>tag:developer.dribbble.com,2014-08-21:/changes/2014-08-21-buckets/</id>
     <title type="html">Bucket Endpoints</title>

@@ -30,6 +30,7 @@ title: Shots
 
         <ul>
           <li><code>animated</code></li>
+          <li><code>attachments</code></li>
           <li><code>debuts</code></li>
           <li><code>playoffs</code></li>
           <li><code>rebounds</code></li>
